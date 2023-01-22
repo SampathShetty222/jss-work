@@ -10,7 +10,6 @@ import { lists } from "components/home/data";
 import styles from "./styles/index.module.css";
 
 const Home = () => {
-  const home = "hello";
   return (
     <div className={styles.div}>
       <h1 className="h1">Next boilerplate with Tailwind configured</h1>

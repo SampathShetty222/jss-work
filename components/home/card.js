@@ -16,8 +16,6 @@ const Card = ({ data }) => {
   );
 };
 
-Card.propTypes = {
-  data: PropTypes.object,
-};
+Card.propTypes = { data: PropTypes.object };
 
 export default Card;

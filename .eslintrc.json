@@ -19,10 +19,7 @@
       "jsx": true
     }
   },
-  "plugins": [
-    "react",
-    "prettier"
-  ],
+  "plugins": ["react", "prettier"],
   "settings": {
     "react": {
       "version": "detect"
@@ -40,9 +37,7 @@
     "camelcase": [
       "error",
       {
-        "allow": [
-          "id_token"
-        ]
+        "allow": ["id_token"]
       }
     ],
     "capitalized-comments": [
@@ -53,24 +48,15 @@
         "ignoreInlineComments": true
       }
     ],
-    "curly": [
-      "error",
-      "multi"
-    ],
-    "eqeqeq": [
-      "error",
-      "smart"
-    ],
+    "curly": ["error", "multi"],
+    "eqeqeq": ["error", "smart"],
     "array-bracket-newline": [
       "error",
       {
         "multiline": true
       }
     ],
-    "array-bracket-spacing": [
-      "error",
-      "never"
-    ],
+    "array-bracket-spacing": ["error", "never"],
     "arrow-spacing": [
       "error",
       {
@@ -85,14 +71,8 @@
         "before": false
       }
     ],
-    "space-before-blocks": [
-      "error",
-      "always"
-    ],
-    "semi-style": [
-      "error",
-      "last"
-    ],
+    "space-before-blocks": ["error", "always"],
+    "semi-style": ["error", "last"],
     "quotes": [
       "error",
       "double",
@@ -101,10 +81,7 @@
         "allowTemplateLiterals": true
       }
     ],
-    "object-curly-spacing": [
-      "error",
-      "always"
-    ],
+    "object-curly-spacing": ["error", "always"],
     "object-curly-newline": [
       "error",
       {
@@ -135,10 +112,7 @@
         "ignoreJSX": "all"
       }
     ],
-    "multiline-ternary": [
-      "error",
-      "always-multiline"
-    ],
+    "multiline-ternary": ["error", "always-multiline"],
     "lines-around-comment": [
       "error",
       {
@@ -163,18 +137,9 @@
         "beforeColon": false
       }
     ],
-    "jsx-quotes": [
-      "error",
-      "prefer-double"
-    ],
-    "indent": [
-      "error",
-      2
-    ],
-    "comma-style": [
-      "error",
-      "last"
-    ],
+    "jsx-quotes": ["error", "prefer-double"],
+    "indent": ["error", 2],
+    "comma-style": ["error", "last"],
     "comma-spacing": [
       "error",
       {
@@ -182,14 +147,8 @@
         "after": true
       }
     ],
-    "brace-style": [
-      "error",
-      "stroustrup"
-    ],
-    "arrow-parens": [
-      "error",
-      "always"
-    ],
+    "brace-style": ["error", "stroustrup"],
+    "arrow-parens": ["error", "always"],
     "sort-vars": [
       "error",
       {
