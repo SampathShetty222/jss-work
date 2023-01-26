@@ -1,38 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next Boilerplate
+
+A boilerplate for creating new projects with Next.js, JavaScript, Tailwind CSS, ESLint, Prettier, Husky & lint-staged. Bootstrapped with create-next-app.
 
 ## Getting Started
 
-First, run the development server:
+To get started, clone the repository and install the dependencies:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+git clone https://github.com/zysk/next-boilerplate.git
+cd next-boilerplate
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**_Important_**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+After installing the dependencies, don't forget the below mentioned steps
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- Change your repository's git origin to the project's git repo using the command below
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  ```
+  git remote set-url origin https://github.com/zysk/repo-url.git
+  ```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  For ex: If you are working on a website called gojek and its git repository URL is https://github.com/zysk/gojek.git, then
 
-## Learn More
+  ```
+  git remote set-url origin https://github.com/zysk/gojek.git
+  ```
 
-To learn more about Next.js, take a look at the following resources:
+- Rename your folder to the name of the project you are working on
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then, you can start the development server with:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```
+npm run dev
+```

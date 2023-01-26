@@ -17,7 +17,7 @@ const App = ({ Component, pageProps }) => {
 
 App.propTypes = {
   pageProps: PropTypes.object,
-  Component: PropTypes.element,
+  Component: PropTypes.func,
 };
 
 export default App;
