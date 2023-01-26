@@ -26,7 +26,7 @@ npm install
   git remote set-url origin https://github.com/zysk/gojek.git
   ```
 
-- Rename your folder to the name of the project you are working on
+- Rename your folder to reflect the name of the current project you are working on.
 - Update constants in site-config.js
 
 Then, you can start the development server with:
@@ -73,9 +73,9 @@ tailwind.config.js
 
 ### Components
 
-All the reusable components in the projects resides in this folder. If a component is reused across the project, for ex, a header, then it should be placed inside common folder or else if it is being reused within a page, for ex, a card can be reused in all blog pages, then create a folder called **blog** inside components folder and add card components inside that. The components folder heirarchy should follow the same heirarchy as of pages folder.
+This folder contains all of the projects' reusable parts. If a component is being used repeatedly throughout the project, such as a header, it should be added to the common folder. If, however, a component is being used repeatedly within a page, such as a card that can be used on all **blog** pages, the component should be added to the blog folder that is created inside the components folder. The hierarchy of the components folder should match that of the pages folder.
 
-**Example**: If there is a folder called blog inside pages folder, then create a same folder inside components and all the reusable components there. The folder structure for each component should also follow the same folder structure as of home folder of this repo
+**Example**: If the pages folder already contains a blog folder, create a similar folder inside the components folder and place all the reusable components inside. Each component's folder structure should correspond to the home folder's folder structure in this repository.
 
 ### Components/styles
 
