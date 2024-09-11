@@ -66,5 +66,19 @@
 }
 
 
+.home-banner .slick-dots li {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.home-banner .slick-dots li button::before {
+  font-size: 10px !important;
+}
+
+.home-banner .slick-dots li.slick-active button:before {
+  color: #FF4E00 !important;
+}
+
+
 
 
