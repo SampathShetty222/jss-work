@@ -2,8 +2,8 @@ import React from "react";
 
 const Contactus = () => {
   return (
-    <section className="bg-white">
-      <div className="max-w-7xl md:mx-auto md:py-20 py-10 mx-4 md:text-center">
+    <section className="bg-white relative z-20">
+      <div className="max-w-7xl md:mx-auto py-10 mx-4 md:text-center">
         <div>
           <h5 className="text-[32px] text-[#101828] font-normal">
             Get in touch

@@ -1,18 +1,26 @@
 export const bannerImages = [
   {
     id: 1,
-    image: "/img/home/marriage-photos.png",
-    title: "JSS Academy of Technical Education, Noida",
+    image: "/img/home/college-building.png",
+    title: "JSS University, Noida",
   },
   {
     id: 2,
-    image: "/img/home/marriage-photos.png",
-    title: "JSS Academy of Technical Education, Noida",
+    image: "/img/home/ground.png",
+    title: "Vibrant Campus Life",
+    desc: "Participate in a variety of sports and recreational activities for a well-rounded college experience.",
   },
   {
     id: 3,
-    image: "/img/home/marriage-photos.png",
-    title: "JSS Academy of Technical Education, Noida",
+    image: "/img/home/dance-practice.png",
+    title: "Celebrate Diverse Cultures",
+    desc: "Join in the vibrant celebrations and cultural events that reflect our diverse student body.",
+  },
+  {
+    id: 4,
+    image: "/img/home/graduation.png",
+    title: "Achieve Academic Heights",
+    desc: "Benefit from top-notch education and mentorship that drive academic success and personal growth.",
   },
 ];
 

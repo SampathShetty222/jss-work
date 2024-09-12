@@ -14,6 +14,7 @@ import NewsCard from "./components/home/newsCard";
 import Contactus from "./components/home/contact-us";
 import Footer from "./components/common/footer";
 import { GiStarShuriken } from "react-icons/gi";
+import FacilitiesCard from "./components/home/facilitiesCard";
 
 const Page = () => {
   return (
@@ -24,7 +25,7 @@ const Page = () => {
       <OurValue />
       <AluminiCard />
       <RecruiterCard />
-      <section className="max-w-7xl md:mx-auto pb-10 mx-4">
+      <section className="max-w-7xl md:mx-auto pb-10 mx-4 mt-16">
         <HeaderCard
           title="Courses Offered By JSS University"
           description="Find important updates, academic schedules, and key notifications to stay informed with the latest circulars and announcements"
@@ -37,7 +38,8 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="bg-white">
+      <FacilitiesCard />
+      <section className="bg-white relative z-20">
         <div className="max-w-7xl md:mx-auto md:flex py-20 mx-4">
           <div className="md:w-1/2 md:pr-24">
             <p className="bg-[#1A1A1A] text-white font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal flex gap-2">
@@ -87,7 +89,7 @@ const Page = () => {
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="bg-white relative z-20">
         <div className="max-w-7xl md:mx-auto md:py-20 py-0 mx-4">
           <HeaderCard
             title="Circulars and Announcements"

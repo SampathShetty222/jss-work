@@ -34,7 +34,7 @@ const HomeBanner = () => {
   return (
     <div className="mt-2 home-banner relative px-5 md:px-0">
       <Slider ref={sliderRef} {...settings}>
-        {bannerImages.map((item) => (
+        {bannerImages.map((item, index) => (
           <div
             key={item.id}
             className="h-[380px] md:px-3 md:h-[500px] relative"
@@ -47,14 +47,24 @@ const HomeBanner = () => {
               sizes="100vw"
               className="w-full h-full rounded-2xl object-cover"
             />
-            <div className="absolute w-auto md:w-full text-center z-10 bottom-14 text-white">
-              <h1 className="font-bold px-3 md:px-0 md:w-auto md:leading-[3.2rem] max-w-3xl mx-auto text-base md:text-5xl">
+            <div className="absolute w-auto md:w-full text-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+              <h1 className="font-normal px-3 md:px-0 md:w-auto md:leading-[3.2rem] max-w-3xl mx-auto text-base md:text-5xl">
                 {item.title}
               </h1>
-              <p className="text-xs px-3 md:px-0 md:w-auto md:text-lg mt-2 font-normal max-w-lg mx-auto">
+              <p className="text-xs px-3 md:px-0 md:w-auto md:text-base mt-5 font-normal max-w-3xl mx-auto">
                 {item.desc}
               </p>
+              {index === 0 && (
+                <button className="bg-white border-2 text-black rounded-md text-sm font-medium py-2 px-4">
+                  Contact Us
+                </button>
+              )}
             </div>
+            {index === 0 && (
+              <button className="bg-white rounded-md text-sm px-4 py-1 absolute top-5 left-8">
+                JSS MAHAVIDYAPEETHA
+              </button>
+            )}
           </div>
         ))}
       </Slider>

@@ -73,14 +73,13 @@ body {
   font-family: "Marcellus", serif;
 }
 
-
 .home-banner .slick-dots li {
-  width: 10px !important;
-  height: 10px !important;
+  width: 8px !important;
+  height: 8px !important;
 }
 
 .home-banner .slick-dots li button::before {
-  font-size: 10px !important;
+  font-size: 9px !important;
 }
 
 .home-banner .slick-dots li.slick-active button:before {

@@ -5,10 +5,10 @@ import { FaArrowRight } from "react-icons/fa6";
 
 const NewsCard = () => {
   return (
-    <section className="bg-white">
+    <section className="bg-white z-20 relative">
       <div className="max-w-7xl md:mx-auto md:flex md:py-20 py-10 mx-4">
         <div className="md:flex md:items-start gap-24">
-          <div className="md:w-[40%] md:sticky top-0">
+          <div className="md:w-[40%] md:sticky top-20">
             <p className="bg-[#1A1A1A] text-white font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal flex gap-2">
               <RiGraduationCapLine className="text-sm" /> Our Blogs
             </p>
@@ -28,7 +28,7 @@ const NewsCard = () => {
             {newsData.map((value) => {
               return (
                 <div
-                  className="md:flex md:gap-5 md:mb-10 mb-4 md:sticky md:top-0 bg-white"
+                  className="md:flex md:gap-5 md:mb-10 mb-4 md:sticky md:top-20"
                   key={value.id}
                 >
                   <div className="">
@@ -38,7 +38,7 @@ const NewsCard = () => {
                       className="rounded-lg md:w-auto w-full"
                     />
                   </div>
-                  <div className="md:max-h-fit md:my-auto my-4">
+                  <div className="md:max-h-fit md:my-auto my-4 bg-white">
                     <span className="bg-[#F5F5F5] font-para text-xs font-normal p-2 me-3">
                       {value.badge}
                     </span>

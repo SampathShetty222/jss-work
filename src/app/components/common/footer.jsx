@@ -33,7 +33,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <footer className="bg-[#171717] py-16 text-white">
+      <footer className="bg-[#171717] relative z-20 py-16 text-white">
         <div className="max-w-7xl md:mx-auto mx-4 md:flex">
           <div className="md:w-1/2">
             <img src="/img/footer/footerLogo.svg" alt="Footer Logo" />

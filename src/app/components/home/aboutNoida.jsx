@@ -3,7 +3,7 @@ import { RiGraduationCapLine } from "react-icons/ri";
 
 const AboutNoida = () => {
   return (
-    <section className="max-w-7xl md:mx-auto md:flex flex md:flex-row flex-col md:py-20 py-10 md:px-0 mx-4">
+    <section className="max-w-7xl md:mx-auto md:flex flex md:flex-row flex-col pb-10 md:pb-20 md:pt-40 pt-10 md:px-0 mx-4">
       <div className="md:w-1/2 w-full md:pr-24 md:order-0 order-1">
         <p className="bg-[#1A1A1A] text-white font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal md:flex gap-2 hidden">
           <RiGraduationCapLine className="text-sm" /> WELCOME
