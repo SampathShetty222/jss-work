@@ -36,13 +36,15 @@ module.exports = {
 				darkblack:"#101828",
 				cream:"#FFFAEB",
 				lightblue:"#EBF8FF",
-				lightgreen:"#EBFFF8"
+				lightgreen:"#EBFFF8",
+				opactiy60:"#FFFFFF99"
   			},
   			secondary: {
   				DEFAULT: 'hsl(var(--secondary))',
   				foreground: 'hsl(var(--secondary-foreground))',
 				lightblack:"#101828",
-				lightgray:"#F5F5F5"
+				lightgray:"#F5F5F5",
+				black:"#161616"
   			},
 			tertiary:{
 				gray:"#475467"
