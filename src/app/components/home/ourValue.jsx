@@ -1,5 +1,6 @@
 import React from "react";
 import { ourValueData } from "./data";
+import OurValueCard from "../common/cards/ourValueCard";
 
 const OurValue = () => {
   return (
@@ -15,18 +16,9 @@ const OurValue = () => {
       <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
         {ourValueData.map((value) => {
           return (
-            <div
-              className="bg-[#F5F5F5] rounded-[14px] p-7 md:mb-0 mb-4"
-              key={value.id}
-            >
-              <img src={value.iconImage} alt={value.altText} />
-              <h4 className="text-[32px] leading-10 font-normal pt-24">
-                {value.title}
-              </h4>
-              <p className="text-base font-normal font-para max-w-[405px] mt-2">
-                {value.description}
-              </p>
-            </div>
+            <React.Fragment key={value.id}>
+              <OurValueCard value={value} />
+            </React.Fragment>
           );
         })}
       </div>

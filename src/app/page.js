@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/common/header";
 import HomeBanner from "./components/home/homeBanner";
 import AboutNoida from "./components/home/aboutNoida";
 import OurValue from "./components/home/ourValue";
@@ -12,14 +11,12 @@ import { FaArrowRight } from "react-icons/fa6";
 import { circularData } from "./components/home/data";
 import NewsCard from "./components/home/newsCard";
 import Contactus from "./components/home/contact-us";
-import Footer from "./components/common/footer";
 import { GiStarShuriken } from "react-icons/gi";
 import FacilitiesCard from "./components/home/facilitiesCard";
 
 const Page = () => {
   return (
     <main>
-      <Header />
       <HomeBanner />
       <AboutNoida />
       <OurValue />
@@ -128,7 +125,6 @@ const Page = () => {
 
       <NewsCard />
       <Contactus />
-      <Footer />
     </main>
   );
 };

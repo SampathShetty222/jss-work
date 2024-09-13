@@ -105,7 +105,7 @@ const FacilitiesCard = () => {
   return (
     <section className="bg-secondary-black sticky top-20">
       <motion.div
-        className="h-[30rem] overflow-y-auto flex gap-x-10 justify-center relative rounded-md p-10"
+        className="h-[30rem] overflow-y-auto flex gap-x-10 justify-center relative rounded-md px-20 py-10"
         ref={ref}
       >
         <div className="relative w-1/2 flex items-start px-4">

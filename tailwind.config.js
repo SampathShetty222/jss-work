@@ -14,8 +14,10 @@ module.exports = {
 			},
 			fontFamily: {
 				para: '"DM Sans", sans-serif'
-			}
-			,
+			},
+			fontSize:{
+				"32":"2rem"
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -49,9 +51,13 @@ module.exports = {
 					lightblack: "#101828",
 					lightgray: "#F5F5F5",
 					black: "#161616",
+					darkgray:"#667085",
+					lighterblue:"#2A94F1",
+					paleblue:"#F5FAFF"
 				},
 				tertiary: {
-					gray: "#475467"
+					gray: "#475467",
+					black:"#101828"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',

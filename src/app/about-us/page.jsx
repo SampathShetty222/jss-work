@@ -1,49 +1,209 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import Authorities from "../components/about-us/authorities";
-import Courses from "../components/about-us/courses";
+import AboutBanner from "../components/about-us/aboutBanner";
+import {
+  aboutStickyData,
+  employeesBenefitData,
+  greenInitiativeData,
+} from "../components/about-us/data";
+import { ourValueData } from "../components/home/data";
+import OurValueCard from "../components/common/cards/ourValueCard";
+import ContentCard from "../components/common/cards/contentCard";
 
 const Page = () => {
+  const [activeSection, setActiveSection] = useState("jss-leaders");
+
+  // Scroll event handler
+  const handleScroll = () => {
+    const sections = [
+      "jss-leaders",
+      "vission-mission",
+      "authorities",
+      "jssmvp",
+      "employee-benefits",
+      "green-initiatives",
+    ];
+    sections.forEach((id) => {
+      const sectionElement = document.getElementById(id);
+      const { top } = sectionElement.getBoundingClientRect();
+      const offset = window.innerHeight * 0.1;
+
+      if (top <= offset && top >= -offset) setActiveSection(id);
+    });
+  };
+
+  // Attach the scroll event listener
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  // Scroll to the clicked section
+  const handleClick = (id) => {
+    const sectionElement = document.getElementById(id);
+    sectionElement.scrollIntoView({ behavior: "smooth" });
+    setActiveSection(id);
+  };
+
   return (
     <main>
-      <section className="max-w-7xl md:mx-auto py-20 mx-4">
-        <div className="max-w-[600px] mx-auto text-center">
-          <h1 className="text-[32px]">About</h1>
-          <p className="text-base opacity-60 font-para pt-5">
-            Lorem ipsum dolor sit amet consectetur. Malesuada nibh justo nunc
-            mauris. Pulvinar et morbi in egestas lectus non aliquam nibh
-            imperdiet. At vitae sodales.
-          </p>
+      <AboutBanner />
+
+      <section className="max-w-7xl mx-auto flex gap-x-10 items-start">
+        <div className="w-1/5 sticky top-20">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search"
+              className="placeholder:text-sm focus-visible:outline-none pl-10 font-para w-full border rounded-lg py-1.5 placeholder:font-normal placeholder:text-secondary-darkgray"
+            />
+            <img
+              src="/img/about/search-icon.svg"
+              alt="search"
+              className="absolute top-[10px] left-3"
+            />
+          </div>
+          <div>
+            <p className="font-bold mt-7 font-para text-sm">About JSS</p>
+            <div className="mt-7">
+              {aboutStickyData.map((item) => (
+                <p
+                  key={item.id}
+                  onClick={() => handleClick(item.unique)}
+                  className={` ${activeSection === item.unique ? "font-medium rounded-lg bg-secondary-paleblue text-secondary-lighterblue" : "text-secondary-darkgray"} cursor-pointer py-3 px-4 text-sm font-medium font-para`}
+                >
+                  {item.title}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="flex flex-wrap md:justify-around justify-center max-w-7xl mx-auto bg-[#F5F5F5] rounded-2xl md:px-16 md:gap-8 gap-8 px-6 py-[46px] mt-8">
-          <div className="text-center">
-            <h2 className="font-para font-bold text-4xl mb-3 text-[#4BA6F5]">
-              40+
-            </h2>
-            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
-              Years of Excellence
+
+        <div className="w-4/5 mb-20">
+          <div id="jss-leaders" className="mb-20">
+            <img src="/img/about/jss-academy.png" alt="jss-academy" />
+            <p className="mt-2 text-2xl font-medium">
+              In pursuit of excellence
+            </p>
+            <div className="font-normal text-tertiary-gray text-base font-para">
+              <p className="mt-3">
+                JSS University, Noida is built on a strong reputation of JSS
+                Academy of Technical Education, Noida, and passionately
+                committed for providing education in Science, Technology,
+                Management and Life Sciences & Pharmacy. It is Steadfast to find
+                solutions to some of the great challenges of our time through
+                scientific research and technological innovations.
+              </p>
+              <p className="mt-3">
+                JSS University, Noida is the fourth University established by
+                JSS Mahavidyapeetha, besides the JSS Academy of Higher Education
+                and Research which is health sciences focused deemed university
+                at Mysuru, JSS Science and Technology University a state private
+                University at Mysuru and JSS Academy of Higher Education and
+                Research at Mauritius.
+              </p>
+              <p className="mt-3">
+                JSS University, Noida plays a key role in providing high quality
+                skilled manpower in the fields of Science, Engineering &
+                Technology and Management, Pharmacy field to transform the
+                society through research and innovation.
+              </p>
+              <p className="mt-3">
+                JSS University, Noida is committed to deliver quality education
+                at all levels and provide opportunities for aspiring youth to
+                meet the global needs of society in every sector.
+              </p>
+            </div>
+
+            <img className="mt-20" src="/img/about/guruji.png" alt="guruji" />
+            <p className="mt-3 text-2xl font-medium">
+              Jagadguru Sri Shivarathri Deshikendra Mahaswamiji
+            </p>
+            <div className="mt-5 font-normal text-tertiary-gray text-base font-para">
+              His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamiji,
+              the present pontiff and the 24th Peethadhyaksha of Sri Jagadguru
+              Veerasimhasana Suttur Math, assumed the Peetha in 1986 at the
+              young age of 29 years. He had his spiritual training under the
+              guidance of his illustrious predecessor H H Jagadguru Dr Sri
+              Shivarathri Rajendra Mahaswamiji the founder president of the JSS
+              Mahavidyapeetha, an educational and cultural organization
+              dedicated to the ideal of providing education to the villages of
+              Karnataka. His Holiness Sri Shivarathri Deshikendra Mahaswamiji,
+              the Honourable Chancellor of JSS University, Noida - a visionary,
+              endeavoured not only to cross the Vindhyas and establish
+              engineering colleges, schools, etc at NOIDA (UP) and the JSS
+              Spiritual and Cultural Centre at New Delhi but also travelled
+              beyond the shores of the country and established the presence of
+              the Math in USA, Mauritius and Dubai. His efforts to reach out to
+              the core of the problems that challenge our society be it
+              literacy, health care, employment or building values amongst the
+              society is lauded and recognised by one and all.
+            </div>
+          </div>
+
+          <div id="vission-mission" className="mb-20">
+            <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
+              {ourValueData.map((value) => {
+                return (
+                  <React.Fragment key={value.id}>
+                    <OurValueCard value={value} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+          </div>
+
+          <div id="authorities" className="mt-28">
+            <Authorities />
+          </div>
+
+          <div id="jssmvp" className="mt-28">
+            <img src="/img/about/jss-college.png" alt="jss-college" />
+            <p className="mt-2 text-2xl font-medium">
+              JSSMVP - In pursuit of excellence
+            </p>
+
+            <p className="mt-5 font-normal text-tertiary-gray text-base font-para">
+              The origin of JSS Mahavidyapeetha (JSSMVP), a formidable
+              educational movement, can be traced to the establishment of a
+              small hostel in 1928 to cater to the accommodation needs of
+              students pursuing higher studies in Mysore. His Holiness Jagadguru
+              Dr. Sri Shivarathri Rajendra Mahaswamiji established the Jagadguru
+              Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) in 1954 which was
+              registered under the Societies Registration Act 1960.
+            </p>
+            <p className="mt-5 font-normal text-tertiary-gray text-base font-para">
+              Focusing on a purpose as expansive yet specific as improving
+              quality of life through Human Development, the JSS Mahavidyapeetha
+              has grown from strength to strength. A long and healthy life,
+              Education for all and a decent standard of living, the indicators
+              of Human development, have been the underlying philosophy of
+              Jagadguru Sri Veerasimhasana Mahasamsthana Math, Suttur
+              Srikshethra for centuries. This is also the philosophy for which
+              the Mahaidyapeetha today stands for.
             </p>
           </div>
-          <div className="text-center">
-            <h2 className="font-para font-bold text-4xl mb-3 text-[#33CC99]">
-              1 lakh+
-            </h2>
-            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
-              Students
-            </p>
+
+          <div id="employee-benefits" className="mt-20">
+            {employeesBenefitData.map((item, index) => (
+              <div key={index} className="mt-10">
+                <ContentCard item={item} />
+              </div>
+            ))}
           </div>
-          <div className="text-center">
-            <h2 className="font-para font-bold text-4xl mb-3 text-[#FDCA30]">
-              10
-            </h2>
-            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
-              Universities
-            </p>
+
+          <div id="green-initiatives" className="mt-20">
+            {greenInitiativeData.map((item, index) => (
+              <div key={index} className="mt-10">
+                <ContentCard item={item} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
-
-      <Authorities />
-      <Courses />
     </main>
   );
 };
