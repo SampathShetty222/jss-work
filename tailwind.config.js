@@ -21,7 +21,8 @@ module.exports = {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				14:"14px"
 			},
 			colors: {
 				background: 'hsl(var(--background))',
@@ -53,11 +54,16 @@ module.exports = {
 					black: "#161616",
 					darkgray:"#667085",
 					lighterblue:"#2A94F1",
-					paleblue:"#F5FAFF"
+					paleblue:"#F5FAFF",
+					opactiy60:"#00000099"
 				},
 				tertiary: {
 					gray: "#475467",
-					black:"#101828"
+					dimgray:"#D0D5DD",
+					black:"#101828",
+					darkblack:"#344054",
+					lightblack:"#1A1A1A",
+					lightgray:"#CACBCF"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -81,6 +87,9 @@ module.exports = {
 					'4': 'hsl(var(--chart-4))',
 					'5': 'hsl(var(--chart-5))'
 				}
+			},
+			inset:{
+				"18":"18px"
 			}
 		}
 	},

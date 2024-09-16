@@ -8,7 +8,7 @@ export const OurValueCard = ({ value }) => {
     <div className="bg-secondary-lightgray rounded-[14px] p-7 md:mb-0 mb-4">
       <img src={value.iconImage} alt={value.altText} />
       <h4 className="text-32 leading-10 font-normal pt-24">{value.title}</h4>
-      <p className="text-base font-normal font-para max-w-[405px] mt-2">
+      <p className="text-base font-normal font-para max-w-sm mt-2">
         {value.description}
       </p>
     </div>

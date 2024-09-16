@@ -85,3 +85,12 @@ body {
 .home-banner .slick-dots li.slick-active button:before {
   color: #FF4E00 !important;
 }
+
+
+.recruiter-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.recruiter-scroll {
+  scrollbar-width: none;
+}

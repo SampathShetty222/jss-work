@@ -1,6 +1,6 @@
 import React from "react";
-import RedirectionCard from "./redirectionCard";
 import { coursesData } from "./data";
+import CourseCard from "../common/cards/courseCard";
 
 const CoursesOffered = () => {
   return (
@@ -8,7 +8,7 @@ const CoursesOffered = () => {
       {coursesData.map((values, index) => {
         return (
           <div key={values.id}>
-            <RedirectionCard
+            <CourseCard
               className={index > 2 ? "md:block hidden" : ""}
               iconImage={values.iconImage}
               heading={values.heading}
