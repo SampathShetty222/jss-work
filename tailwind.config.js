@@ -90,6 +90,9 @@ module.exports = {
 			},
 			inset:{
 				"18":"18px"
+			},
+			padding:{
+				"10px":"10px"
 			}
 		}
 	},

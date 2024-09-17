@@ -15,9 +15,9 @@ const Header = () => {
           <Menus />
           <div className="flex items-center gap-x-8">
             <div className="flex gap-x-2 items-center">
-              <p className="text-primary-orange font-semibold">En</p>
+              <p className="text-primary-orange text-sm font-semibold">En</p>
               <img src="/img/header/liner.svg" alt="liner" />
-              <img src="/img/header/hindi.svg" alt="hindi" />
+              <p className="font-normal text-sm">हि</p>
             </div>
             <BsSearch />
           </div>

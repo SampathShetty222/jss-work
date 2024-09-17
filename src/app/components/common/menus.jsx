@@ -73,14 +73,8 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="px-7 py-10 w-[800px]">
-              <p className="text-primary-darkblack text-base font-semibold">
-                About Us
-              </p>
-              <p className="text-tertiary-gray text-sm font-normal">
-                Lorem ipsum dorem
-              </p>
-              <div className="mt-8 flex gap-x-14">
+            <ul className="px-7 py-10 w-[850px]">
+              <div className="flex gap-x-14">
                 <div>
                   <p className="text-xs text-primary-orange font-semibold">
                     Links
@@ -90,7 +84,7 @@ export function Menus() {
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="text-sm underline leading-7 text-tertiary-gray"
+                        className="text-sm underline hover:text-secondary-lighterblue leading-7 text-tertiary-gray"
                       >
                         {item.title}
                       </Link>
@@ -102,12 +96,12 @@ export function Menus() {
                   <p className="text-xs text-primary-orange font-semibold">
                     Support
                   </p>
-                  <div className="mt-3 grid grid-cols-2 gap-x-12 gap-y-5">
+                  <div className="mt-3 grid grid-cols-2 gap-x-12 gap-y-2">
                     {aboutSupport.map((item) => (
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="flex items-center gap-x-5"
+                        className="flex items-center py-3 px-2 hover:bg-gray-100 rounded-lg gap-x-5"
                       >
                         <NavigationChip
                           backgroundColor="bg-primary-cream"
@@ -129,12 +123,12 @@ export function Menus() {
                 <p className="text-xs text-primary-orange font-semibold">
                   Support
                 </p>
-                <div className="mt-3 flex flex-col gap-y-5">
+                <div className="mt-3 flex flex-col gap-y-2">
                   {admissionLink.map((item) => (
                     <Link
                       key={item.id}
                       href={item.link}
-                      className="flex items-center gap-x-5"
+                      className="flex items-center hover:bg-gray-100 rounded-lg py-3 px-2 gap-x-5"
                     >
                       <NavigationChip
                         backgroundColor="bg-primary-lightgreen"
@@ -150,8 +144,8 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Academics & Research</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="px-7 py-10 w-[950px] ">
-              <div className="flex gap-x-14">
+            <ul className="px-7 py-10 w-[980px] ">
+              <div className="flex gap-x-10">
                 <div>
                   <p className="text-xs text-primary-orange font-semibold">
                     Academics
@@ -161,7 +155,7 @@ export function Menus() {
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="flex items-center gap-x-5"
+                        className="flex items-center py-3 px-2 hover:bg-gray-100 rounded-lg gap-x-5"
                       >
                         <NavigationChip
                           backgroundColor="bg-primary-lightblue"
@@ -176,12 +170,12 @@ export function Menus() {
                   <p className="text-xs text-primary-orange font-semibold">
                     Research
                   </p>
-                  <div className="mt-3 grid grid-cols-2 gap-x-12 gap-y-5">
+                  <div className="mt-3 grid grid-cols-2 gap-x-12 gap-y-2">
                     {researchLinks.map((item) => (
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="flex items-center gap-x-5"
+                        className="flex py-3 px-2 hover:bg-gray-100 rounded-lg items-center gap-x-5"
                       >
                         <NavigationChip
                           backgroundColor="bg-primary-lightblue"
@@ -198,18 +192,18 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Student Life</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="px-7 py-10 w-[600px]">
+            <ul className="px-7 py-10 w-[650px]">
               <div className="flex justify-between">
                 <div>
                   <p className="text-xs text-primary-orange font-semibold">
                     Student Support
                   </p>
-                  <div className="mt-3 inline-flex flex-col gap-y-8">
+                  <div className="mt-3 inline-flex flex-col gap-y-2">
                     {studentLinks.map((item) => (
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="flex items-center gap-x-5"
+                        className="flex py-3 px-2 hover:bg-gray-100 rounded-lg items-center gap-x-5"
                       >
                         <NavigationChip
                           backgroundColor="bg-secondary-lightgray"
@@ -224,12 +218,12 @@ export function Menus() {
                   <p className="text-xs text-primary-orange font-semibold">
                     Facilities
                   </p>
-                  <div className="mt-3 inline-flex flex-col gap-y-8">
+                  <div className="mt-3 inline-flex flex-col gap-y-2">
                     {facilitiesLinks.map((item) => (
                       <Link
                         key={item.id}
                         href={item.link}
-                        className="flex items-center gap-x-5"
+                        className="flex hover:bg-gray-100 rounded-lg py-3 px-2 items-center gap-x-5"
                       >
                         <NavigationChip
                           backgroundColor="bg-secondary-lightgray"
@@ -262,17 +256,17 @@ export function Menus() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>More</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="grid w-[400px] gap-3 px-7 py-10 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
+            <ul className="px-7 py-10 lg:w-[800px] flex justify-end">
               <div>
                 <p className="text-xs text-primary-orange font-semibold">
-                  Facilities
+                  More
                 </p>
-                <div className="mt-3 inline-flex flex-col gap-y-8">
+                <div className="mt-3 inline-flex flex-col gap-y-2">
                   {moreLinks.map((item) => (
                     <Link
                       key={item.id}
                       href={item.link}
-                      className="flex items-center gap-x-5"
+                      className="flex items-center py-3 px-2 hover:bg-gray-100 rounded-lg gap-x-5"
                     >
                       <NavigationChip
                         backgroundColor="bg-secondary-lightgray"
