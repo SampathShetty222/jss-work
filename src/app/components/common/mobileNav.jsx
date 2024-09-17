@@ -64,13 +64,13 @@ const MobileNav = ({ sidebarOpen, setSidebarOpen }) => {
                   />
                   <MdClose
                     onClick={() => setSidebarOpen(false)}
-                    className="text-xl"
+                    className="text-xl cursor-pointer"
                   />
                 </div>
                 {activeMenu !== null && (
                   <div
                     onClick={() => setActiveMenu(null)}
-                    className="mt-3 px-5 flex items-center gap-x-2"
+                    className="mt-3 px-5 cursor-pointer !inline-flex items-center gap-x-2"
                   >
                     <FiArrowRight className="text-lg rotate-180" />
                     <p className="text-base font-para font-normal text-primary-lightblack">
@@ -93,7 +93,7 @@ const MobileNav = ({ sidebarOpen, setSidebarOpen }) => {
                                 ? handleRouter
                                 : () => setActiveMenu(item.id)
                             }
-                            className="px-5 flex items-center py-3 border-b justify-between"
+                            className="px-5 cursor-pointer flex items-center py-3 border-b justify-between"
                           >
                             <p
                               className={`font-para ${isActive ? "text-primary-orange" : "text-primary-lightblack"} font-normal text-base`}
