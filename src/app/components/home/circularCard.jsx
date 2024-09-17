@@ -7,7 +7,7 @@ import { PropTypes } from "prop-types";
 
 const CircularCard = ({ value }) => {
   return (
-    <div className="p-7 bg-secondary-lightgray border-2 border-white hover:bg-white hover:border-secondary-lightgray duration-300 rounded-14 relative md:mb-0 mb-4">
+    <div className="p-7 bg-secondary-lightgray border-2 border-white hover:bg-white hover:border-secondary-lightgray duration-300 rounded-14 relative">
       <div className="absolute top-18 right-18">
         {value.badge && (
           <div className="flex bg-primary-orange px-2 py-1 rounded-full text-white items-center gap-1.5">

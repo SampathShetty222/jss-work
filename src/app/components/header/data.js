@@ -291,3 +291,233 @@ export const moreLinks = [
     icon: "/img/more/briefcase.svg",
   },
 ];
+
+export const mobileNavData = [
+  {
+    id: 1,
+    title: "Home",
+    link: "/",
+    path: "/",
+  },
+  {
+    id: 2,
+    title: "About",
+    path: "/about-us",
+    subMenus: [
+      {
+        id: 1,
+        title: "About",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Mission & Vision",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Message",
+        link: "#",
+      },
+      {
+        id: 4,
+        title: "Governance",
+        link: "#",
+      },
+      {
+        id: 5,
+        title: "Administration",
+        link: "#",
+      },
+      {
+        id: 6,
+        title: "Green Initiatives",
+        link: "#",
+      },
+      {
+        id: 7,
+        title: "Reports & Download",
+        link: "#",
+      },
+      {
+        id: 8,
+        title: "Mandatory Disclosure",
+        link: "#",
+      },
+      {
+        id: 9,
+        title: "Contact Us",
+        link: "#",
+      },
+    ],
+  },
+  {
+    id: 3,
+    title: "Admission",
+    subMenus: [
+      {
+        id: 1,
+        title: "Under Graduate (UG) Programs",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Post graduate (PG) Programs",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Admission Help Desk/ Contact",
+        link: "#",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Academics & Research",
+    subMenus: [
+      {
+        id: 1,
+        title: "Departments",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Calendar of Events",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Collaboration and MOU’s",
+        link: "#",
+      },
+      {
+        id: 4,
+        title: "Research Center",
+        link: "#",
+      },
+      {
+        id: 5,
+        title: "Grants",
+        link: "#",
+      },
+      {
+        id: 6,
+        title: "Patents",
+        link: "#",
+      },
+      {
+        id: 7,
+        title: "Events/Activities",
+        link: "#",
+      },
+      {
+        id: 8,
+        title: "STEP",
+        link: "#",
+      },
+      {
+        id: 9,
+        title: "Contact (Research)",
+        link: "#",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "Student Life",
+    subMenus: [
+      {
+        id: 1,
+        title: "Scholarships",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Mentoring Scheme",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Exam",
+        link: "#",
+      },
+      {
+        id: 4,
+        title: "Techno Cultural Impact",
+        link: "#",
+      },
+      {
+        id: 5,
+        title: "Social Outreach Program",
+        link: "#",
+      },
+      {
+        id: 6,
+        title: "Library and Information Centre ",
+        link: "#",
+      },
+      {
+        id: 7,
+        title: "Hostel",
+        link: "#",
+      },
+      {
+        id: 8,
+        title: "Sports",
+        link: "#",
+      },
+      {
+        id: 9,
+        title: "Cafeteria",
+        link: "#",
+      },
+      {
+        id: 10,
+        title: "Infrastructure",
+        link: "#",
+      },
+      {
+        id: 11,
+        title: "JSS Counselling Centre",
+        link: "#",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Training & Placement",
+    subMenus: [
+      {
+        id: 1,
+        title: "training",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "More",
+    subMenus: [
+      {
+        id: 1,
+        title: "Alumni",
+        link: "#",
+      },
+      {
+        id: 2,
+        title: "Photo Gallery",
+        link: "#",
+      },
+      {
+        id: 3,
+        title: "Online Grievance Support",
+        link: "#",
+      },
+      {
+        id: 4,
+        title: "Career Opportunity",
+        link: "#",
+      },
+    ],
+  },
+];

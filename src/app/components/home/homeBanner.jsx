@@ -53,10 +53,10 @@ const HomeBanner = () => {
             </div>
 
             <div className="absolute w-auto md:w-full text-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
-              <h1 className="font-normal px-3 md:px-0 md:w-auto md:leading-[3.2rem] max-w-3xl mx-auto text-base md:text-5xl">
+              <h1 className="font-normal md:w-auto md:leading-[3.2rem] max-w-3xl mx-auto text-lg md:text-5xl">
                 {item.title}
               </h1>
-              <p className="text-xs px-3 md:px-0 md:w-auto md:text-base mt-5 font-normal max-w-3xl mx-auto">
+              <p className="text-xs md:w-auto md:text-base mt-5 font-normal max-w-3xl mx-auto">
                 {item.desc}
               </p>
               {index === 0 && (
