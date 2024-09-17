@@ -29,13 +29,14 @@ const Page = () => {
         />
         <div className="md:grid grid-cols-3 gap-6 pt-9">
           <CoursesOffered />
-          <button className="md:mt-10 mt-8 text-sm font-medium md:w-fit w-full px-4 py-[10px] border-2 border-tertiary-lightgray border-opacity-80 rounded-md font-para md:hidden block">
+          <button className="md:mt-10 mt-8 text-sm font-medium md:w-fit w-full px-4 py-10px border-2 border-tertiary-lightgray border-opacity-80 rounded-md font-para md:hidden block">
             View More
           </button>
         </div>
       </section>
 
       <FacilitiesCard />
+
       <section className="bg-white relative z-20">
         <div className="max-w-7xl md:mx-auto md:flex py-20 mx-4">
           <div className="md:w-1/2 md:pr-24">

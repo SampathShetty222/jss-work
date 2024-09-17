@@ -16,7 +16,8 @@ module.exports = {
 				para: '"DM Sans", sans-serif'
 			},
 			fontSize:{
-				"32":"2rem"
+				"32":"2rem",
+				"10px":"10px"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -63,7 +64,8 @@ module.exports = {
 					black:"#101828",
 					darkblack:"#344054",
 					lightblack:"#1A1A1A",
-					lightgray:"#CACBCF"
+					lightgray:"#CACBCF",
+					lighterblack:"#171717"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',

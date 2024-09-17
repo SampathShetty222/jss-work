@@ -26,7 +26,7 @@ const NewsCard = () => {
             {newsData.map((value) => {
               return (
                 <div
-                  className="md:flex md:gap-5 md:mb-10 mb-4 md:sticky md:top-20"
+                  className="md:flex md:gap-5 md:mb-10 mb-8 md:sticky md:top-20"
                   key={value.id}
                 >
                   <div className="overflow-hidden rounded-lg">
@@ -44,9 +44,9 @@ const NewsCard = () => {
                       {value.publishDate}
                     </span>
                     <div className="max-w-96">
-                      <h5 className="text-xl leading-8 mt-4 ">{value.title}</h5>
+                      <h5 className="text-xl leading-8 mt-4">{value.title}</h5>
                       <a href={value.anchorLink}>
-                        <p className="flex gap-[10px] items-center text-[14px] font-para pt-10">
+                        <p className="flex gap-[10px] items-center text-[14px] font-para mt-3 md:mt-10">
                           <FaArrowRight />
                           Read Articles
                         </p>

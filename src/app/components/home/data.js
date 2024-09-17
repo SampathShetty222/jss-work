@@ -233,3 +233,42 @@ export const newsData = [
     anchorLink: "#",
   },
 ];
+
+export const content = [
+  {
+    title: "Classrooms",
+    description:
+      "Our classrooms are designed to foster an engaging learning experience with modern seating arrangements and audio-visual equipment. Spacious and well-ventilated, these classrooms provide a comfortable environment that enhances focus and collaboration among students.",
+    content: "/img/home/classroom.svg",
+  },
+  {
+    title: "Modern Laboratories",
+    description:
+      "Equipped with the latest technology, our laboratories offer hands-on experience, enabling students to apply theoretical knowledge in a practical setting. Regular upgrades ensure that students work with current industry-standard tools and equipment.",
+    content: "/img/home/laboratory.svg",
+  },
+  {
+    title: "Library",
+    description:
+      "Our library boasts an extensive collection of books, journals, and digital resources, providing a quiet and resourceful space for academic growth. Dedicated study areas and digital access ensure a comprehensive learning environment.",
+    content: "/img/home/library.svg",
+  },
+  {
+    title: "Hostel Facilities",
+    description:
+      "Comfortable and secure accommodations with essential amenities for both boys and girls, fostering a supportive living environment. The hostels also provide recreational facilities and a safe atmosphere for holistic development.",
+    content: "/img/home/hostel.svg",
+  },
+  {
+    title: "Sports Complex",
+    description:
+      "A wide range of sports facilities, including fields, courts, and indoor games, encouraging physical fitness and teamwork. Regular sports events and coaching sessions help students stay active and engaged.",
+    content: "/img/home/sport-complex.svg",
+  },
+  {
+    title: "Auditorium",
+    description:
+      "A modern auditorium equipped with state-of-the-art audio-visual technology, ideal for hosting events, seminars, and cultural programs. The space accommodates large audiences, making it perfect for institutional gatherings and guest lectures.",
+    content: "/img/home/auditorium.svg",
+  },
+];
