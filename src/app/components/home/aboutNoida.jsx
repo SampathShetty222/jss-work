@@ -34,7 +34,7 @@ const AboutNoida = () => {
             JSSATE, Noida
           </h2>
           <img
-            src="/img/home/about.svg"
+            src="/img/home/about-image-update.png"
             alt="about-page"
             className="w-full h-full"
           />

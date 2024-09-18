@@ -31,12 +31,12 @@ const FacilitiesCard = () => {
   });
 
   return (
-    <section className="py-10 lg:py-0 bg-secondary-black lg:sticky top-20">
+    <section className="py-10 lg:py-0 md:px-20 bg-secondary-black lg:sticky top-20">
       <motion.div
-        className="h-[30rem] overflow-y-auto hidden lg:flex gap-x-10 justify-center relative rounded-md px-20 py-10"
+        className="h-[30rem] max-w-7xl mx-auto facilities-card overflow-y-auto hidden lg:flex gap-x-10 justify-center relative rounded-md py-10"
         ref={ref}
       >
-        <div className="relative w-1/2 flex items-start px-4">
+        <div className="relative w-1/2 flex items-start">
           <div>
             {content.map((item, index) => (
               <div key={item.title + index} className="my-32">

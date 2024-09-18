@@ -49,11 +49,11 @@ const Page = () => {
   };
 
   return (
-    <main>
+    <main className="px-4 md:px-20">
       <AboutBanner />
 
       <section className="max-w-7xl mx-auto flex gap-x-10 items-start">
-        <div className="w-1/5 sticky top-20">
+        <div className="hidden lg:block w-1/5 sticky top-20">
           <div className="relative">
             <input
               type="text"
@@ -82,7 +82,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="w-4/5 mb-20">
+        <div className="w-full lg:w-4/5 mb-20">
           <div id="jss-leaders">
             <img src="/img/about/jss-academy.png" alt="jss-academy" />
             <p className="mt-2 text-2xl font-medium">

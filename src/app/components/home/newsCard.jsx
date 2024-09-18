@@ -5,7 +5,7 @@ import NameChip from "../common/chips/nameChip";
 
 const NewsCard = () => {
   return (
-    <section className="bg-white z-20 relative">
+    <section className="bg-white md:px-20 z-20 relative">
       <div className="max-w-7xl md:mx-auto md:flex md:py-20 py-10 mx-4">
         <div className="md:flex md:items-start gap-24">
           <div className="md:w-[40%] md:sticky top-20">
@@ -18,7 +18,7 @@ const NewsCard = () => {
               covering a wide range of topics related to education, career
               development, industry trends, and more.
             </p>
-            <button className="mt-10 text-sm font-medium w-fit px-4 py-[10px] border-2 border-tertiary-lightgray border-opacity-80 rounded-md font-para md:block hidden">
+            <button className="mt-8 text-sm font-medium w-fit px-4 py-[10px] border-2 border-tertiary-lightgray border-opacity-80 rounded-md font-para md:block hidden">
               View All
             </button>
           </div>

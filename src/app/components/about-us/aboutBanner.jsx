@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutBanner = () => {
   return (
-    <section className="max-w-7xl md:mx-auto py-20 mx-4">
+    <section className="max-w-7xl md:mx-auto py-20">
       <div className="max-w-2xl mx-auto text-center">
         <h1 className="text-32">About</h1>
         <p className="text-base text-secondary-opactiy60 font-para pt-5">

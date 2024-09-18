@@ -94,3 +94,11 @@ body {
 .recruiter-scroll {
   scrollbar-width: none;
 }
+
+.facilities-card::-webkit-scrollbar {
+  display: none;
+}
+
+.facilities-card {
+  scrollbar-width: none;
+}
