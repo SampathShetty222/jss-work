@@ -3,9 +3,9 @@ import React from "react";
 const AboutBanner = () => {
   return (
     <section className="max-w-7xl md:mx-auto py-20 mx-4">
-      <div className="max-w-[600px] mx-auto text-center">
-        <h1 className="text-[32px]">About</h1>
-        <p className="text-base opacity-60 font-para pt-5">
+      <div className="max-w-2xl mx-auto text-center">
+        <h1 className="text-32">About</h1>
+        <p className="text-base text-secondary-opactiy60 font-para pt-5">
           Lorem ipsum dolor sit amet consectetur. Malesuada nibh justo nunc
           mauris. Pulvinar et morbi in egestas lectus non aliquam nibh
           imperdiet. At vitae sodales.

@@ -83,7 +83,7 @@ const Page = () => {
         </div>
 
         <div className="w-4/5 mb-20">
-          <div id="jss-leaders" className="mb-20">
+          <div id="jss-leaders">
             <img src="/img/about/jss-academy.png" alt="jss-academy" />
             <p className="mt-2 text-2xl font-medium">
               In pursuit of excellence
@@ -144,7 +144,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div id="vission-mission" className="mb-20">
+          <div id="vission-mission" className="pt-20">
             <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
               {ourValueData.map((value) => {
                 return (
@@ -156,11 +156,11 @@ const Page = () => {
             </div>
           </div>
 
-          <div id="authorities" className="mt-28">
+          <div id="authorities" className="pt-28">
             <Authorities />
           </div>
 
-          <div id="jssmvp" className="mt-28">
+          <div id="jssmvp" className="pt-28">
             <img src="/img/about/jss-college.png" alt="jss-college" />
             <p className="mt-2 text-2xl font-medium">
               JSSMVP - In pursuit of excellence
@@ -187,7 +187,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div id="employee-benefits" className="mt-20">
+          <div id="employee-benefits" className="pt-20">
             {employeesBenefitData.map((item, index) => (
               <div key={index} className="mt-10">
                 <ContentCard item={item} />
@@ -195,7 +195,7 @@ const Page = () => {
             ))}
           </div>
 
-          <div id="green-initiatives" className="mt-20">
+          <div id="green-initiatives" className="pt-20">
             {greenInitiativeData.map((item, index) => (
               <div key={index} className="mt-10">
                 <ContentCard item={item} />

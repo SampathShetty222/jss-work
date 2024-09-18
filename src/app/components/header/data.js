@@ -30,7 +30,7 @@ export const aboutSupport = [
   {
     id: 1,
     title: "About",
-    link: "#",
+    link: "/about-us",
     desc: "Learn About Our College",
     icon: "/img/about/about-info.svg",
   },
