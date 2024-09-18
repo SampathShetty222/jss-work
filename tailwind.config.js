@@ -19,6 +19,9 @@ module.exports = {
 				"32":"2rem",
 				"10px":"10px"
 			},
+			maxWidth:{
+				"headerCard":"600px"
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
