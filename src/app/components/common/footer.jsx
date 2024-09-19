@@ -7,6 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaYoutube } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
+import Link from "next/link";
 
 const Footer = () => {
   const quickLinks = [
@@ -36,7 +37,9 @@ const Footer = () => {
       <footer className="bg-[#171717] md:px-20 relative z-20 py-16 text-white">
         <div className="max-w-7xl md:mx-auto mx-4 md:flex">
           <div className="md:w-1/2">
-            <img src="/img/footer/footerLogo.svg" alt="Footer Logo" />
+            <Link className="!inline-flex" href="/">
+              <img src="/img/footer/footerLogo.svg" alt="Footer Logo" />
+            </Link>
             <div className="max-w-80 md:mt-8 mt-6">
               <p className="font-para text-sm font-normal leading-[22px]">
                 JSS Academy of Technical Educaiton, Noida

@@ -70,7 +70,7 @@
 }
 
 body {
-  font-family: "Marcellus", serif;
+  font-family: "Marcellus";
 }
 
 .home-banner .slick-dots li {
@@ -102,3 +102,18 @@ body {
 .facilities-card {
   scrollbar-width: none;
 }
+
+
+.PhoneInputInput{
+  height: 100%;
+  border: none;
+  outline: none;
+  }
+  
+  .PhoneInput:focus-within {
+    outline: 2px solid black;  
+  }
+  
+  .custom-phone-input.PhoneInput:focus-within {
+    outline: none;  
+  }

@@ -6,7 +6,7 @@ const AboutNoida = () => {
     <section className="md:px-20">
       <div className="max-w-7xl md:mx-auto flex gap-x-16 md:flex-row flex-col pb-10 md:pb-20 md:pt-40 pt-20 mx-4">
         <div className="md:w-1/2 w-full md:order-0 order-1">
-          <p className="bg-tertiary-lightblack text-white font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal md:flex gap-2 hidden">
+          <p className="bg-tertiary-lightblack text-white font-para uppercase px-3 py-1.5 w-fit rounded-2xl text-xs font-normal md:flex gap-2 hidden">
             <RiGraduationCapLine className="text-sm" /> WELCOME
           </p>
           <h2 className="text-32 font-normal pb-6 pt-4 hidden md:block">
@@ -27,7 +27,7 @@ const AboutNoida = () => {
           </button>
         </div>
         <div className="md:w-1/2 w-full md:order-1 order-0">
-          <p className="bg-tertiary-lightblack text-white font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal flex gap-2 md:hidden ">
+          <p className="bg-tertiary-lightblack text-white font-para uppercase px-3 py-1.5 w-fit rounded-2xl text-xs font-normal flex gap-2 md:hidden ">
             <RiGraduationCapLine className="text-sm" /> WELCOME
           </p>
           <h2 className="text-32 font-normal pb-6 pt-4  md:hidden block">

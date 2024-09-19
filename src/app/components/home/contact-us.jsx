@@ -2,8 +2,13 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import { contactSchema } from "../schema/contactSchema";
+import "react-phone-number-input/style.css";
+import PhoneInput from "react-phone-number-input";
 
 const Contactus = () => {
+  const handlePhoneNumberChange = (value, setFieldValue) => {
+    setFieldValue("phone", value);
+  };
   return (
     <section className="bg-white relative z-20">
       <div className="max-w-7xl md:mx-auto py-20 mx-4 md:text-center">
@@ -25,7 +30,7 @@ const Contactus = () => {
             }}
             validationSchema={contactSchema}
           >
-            {({ errors, touched }) => (
+            {({ values, errors, touched, setFieldValue, setFieldTouched }) => (
               <Form>
                 <div className="max-w-[480px] mx-auto">
                   <div className="md:flex text-start gap-6">
@@ -96,14 +101,21 @@ const Contactus = () => {
                       htmlFor="phone"
                       className="font-para text-sm font-medium text-tertiary-darkblack"
                     >
-                      Phone number
+                      Phone number{" "}
+                      <span className="text-primary-orange">*</span>
                     </label>
-                    <Field
-                      id="phone"
-                      name="phone"
-                      type="tel"
+                    <PhoneInput
+                      international
+                      defaultCountry="IN"
+                      countryCallingCodeEditable={false}
+                      value={values.phone}
+                      onChange={(value) =>
+                        handlePhoneNumberChange(value, setFieldValue)
+                      }
+                      onBlur={() => setFieldTouched("phone", true, true)}
+                      onFocus={() => setFieldTouched("phone", false, false)}
                       placeholder="+91 9876 543 321"
-                      className="border border-tertiary-dimgray rounded-md mt-[6px] px-4 py-3 font-para text-md"
+                      className="border border-tertiary-dimgray phone-input rounded-md mt-[6px] px-4 py-3 font-para text-md"
                     />
                     {errors.phone && touched.phone && (
                       <p className="text-red-500 pl-2 mt-1 text-sm font-medium">

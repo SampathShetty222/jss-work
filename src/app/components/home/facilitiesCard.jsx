@@ -41,7 +41,7 @@ const FacilitiesCard = () => {
             {content.map((item, index) => (
               <div key={item.title + index} className="my-32">
                 {index === 0 && (
-                  <p className="bg-white mb-2 text-black font-para uppercase px-4 py-2 w-fit rounded-2xl text-xs font-normal flex gap-2">
+                  <p className="bg-white mb-2 text-black font-para uppercase px-3 py-1.5 w-fit rounded-2xl text-xs font-normal flex gap-2">
                     <RiGraduationCapLine className="text-sm text-black" />{" "}
                     FACILTIES
                   </p>

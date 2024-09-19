@@ -4,13 +4,16 @@ import { Menus } from "./menus";
 import { BsSearch } from "react-icons/bs";
 import { LuMenu } from "react-icons/lu";
 import MobileNav from "./mobileNav";
+import Link from "next/link";
 
 const Header = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   return (
     <header className="sticky top-0 py-3 z-50 bg-white px-5 md:px-10 lg:px-20">
       <nav className="hidden lg:flex justify-between items-center">
-        <img src="/img/header/jss-noida-logo.svg" alt="jss-noida-logo" />
+        <Link href={"/"}>
+          <img src="/img/header/jss-noida-logo.svg" alt="jss-noida-logo" />
+        </Link>
         <div className="flex items-center gap-x-5">
           <Menus />
           <div className="flex items-center gap-x-8">

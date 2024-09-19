@@ -1,5 +1,6 @@
 import React from "react";
 import { alumniData } from "./data";
+import Link from "next/link";
 
 const AluminiCard = () => {
   return (
@@ -38,9 +39,14 @@ const AluminiCard = () => {
             );
           })}
         </div>
-        <button className="mt-10 text-sm font-medium md:w-fit w-full px-4 py-[10px] border-2 border-white border-opacity-20 rounded-md font-para text-white">
-          View More
-        </button>
+        <div className="mt-10">
+          <Link
+            href={"/alumni"}
+            className="text-sm font-medium md:w-fit w-full px-4 py-[10px] border-2 border-white border-opacity-20 rounded-md font-para text-white"
+          >
+            View More
+          </Link>
+        </div>
       </div>
     </section>
   );

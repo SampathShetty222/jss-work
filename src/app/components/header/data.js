@@ -89,14 +89,14 @@ export const admissionLink = [
   {
     id: 1,
     title: "Under Graduate (UG) Programs",
-    link: "#",
+    link: "/admission/ug-programs",
     desc: "Bachelor's Programs - BE",
     icon: "/img/admission/graduation-ug.svg",
   },
   {
     id: 2,
     title: "Post Graduate (PG) Programs",
-    link: "#",
+    link: "/admission/pg-programs",
     desc: "Master's Programs - Mtech",
     icon: "/img/admission/graduation-pg.svg",
   },

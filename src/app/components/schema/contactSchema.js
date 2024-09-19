@@ -23,13 +23,8 @@ export const contactSchema = Yup.object().shape({
       (value) => value !== value.toUpperCase()
     ),
   phone: Yup.string()
-    .matches(/^\d{10}$/, "Phone number must be 10 digits")
-    .test(
-      "startsWith6to9",
-      "Phone number must start with a digit between 6 and 9",
-      (value) => /^[6-9]/.test(value)
-    )
-    .required("Phone number is required"),
+    .required("Phone number is required")
+    .max(19, "Phone number cannot exceed 19 characters"),
   message: Yup.string()
     .matches(/^[^\s]/, "First name should not start with a space")
     .min(3, "Minimum 3 characters required")
