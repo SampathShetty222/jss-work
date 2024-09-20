@@ -24,12 +24,17 @@ const Page = () => {
       "employee-benefits",
       "green-initiatives",
     ];
+
+    const middleOfViewport = window.innerHeight / 2;
     sections.forEach((id) => {
       const sectionElement = document.getElementById(id);
-      const { top } = sectionElement.getBoundingClientRect();
-      const offset = window.innerHeight * 0.1;
+      if (sectionElement) {
+        const { top, bottom } = sectionElement.getBoundingClientRect();
 
-      if (top <= offset && top >= -offset) setActiveSection(id);
+        // Check if the section is around the middle of the viewport
+        if (top <= middleOfViewport && bottom >= middleOfViewport)
+          setActiveSection(id);
+      }
     });
   };
 

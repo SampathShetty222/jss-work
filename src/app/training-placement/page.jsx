@@ -1,5 +1,3 @@
-/* eslint-disable no-nested-ternary */
-
 "use client";
 import React, { useEffect, useState } from "react";
 import Authorities from "../components/about-us/authorities";
@@ -10,23 +8,22 @@ import {
 import { ourValueData } from "../components/home/data";
 import OurValueCard from "../components/common/cards/ourValueCard";
 import ContentCard from "../components/common/cards/contentCard";
-import { studentsStickyData } from "../components/student-life/data";
-import { IoIosArrowDown } from "react-icons/io";
+import { trainingPlacementData } from "../components/trainingPlacement/data";
 
 const Page = () => {
-  const [activeSection, setActiveSection] = useState("scholarship");
-  const [openNav, setOpenNav] = useState(true);
+  const [activeSection, setActiveSection] = useState("overview");
 
   // Scroll event handler
   const handleScroll = () => {
     const sections = [
-      "scholarship",
-      "statement",
-      "mentoring",
-      "exams",
-      "techno-cultural",
-      "social-outreach",
+      "overview",
+      "placement-team",
+      "facilities",
+      "activities",
+      "placement-procedure",
+      "placement-portal",
     ];
+
     const middleOfViewport = window.innerHeight / 2;
     sections.forEach((id) => {
       const sectionElement = document.getElementById(id);
@@ -57,13 +54,40 @@ const Page = () => {
 
   return (
     <main className="px-4 md:px-20">
-      <section className="max-w-7xl mx-auto py-20">
+      <section className="max-w-7xl md:mx-auto py-20">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="text-32">Student Support</p>
+          <p className="text-32">Training & placement</p>
           <p className="text-base text-secondary-opactiy60 font-para pt-5">
-            JSS University Noida ensures students have access to guidance and
-            resources for both academic and personal success.
+            Lorem ipsum dolor sit amet consectetur. Malesuada nibh justo nunc
+            mauris. Pulvinar et morbi in egestas lectus non aliquam nibh
+            imperdiet. At vitae sodales.
           </p>
+        </div>
+        <div className="flex flex-wrap md:justify-around justify-center max-w-7xl mx-auto bg-[#F5F5F5] rounded-2xl md:px-16 md:gap-8 gap-8 px-6 py-[46px] mt-8">
+          <div className="text-center">
+            <h2 className="font-para font-bold text-4xl mb-3 text-[#4BA6F5]">
+              40+
+            </h2>
+            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
+              Years of Excellence
+            </p>
+          </div>
+          <div className="text-center">
+            <h2 className="font-para font-bold text-4xl mb-3 text-[#33CC99]">
+              1 lakh+
+            </h2>
+            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
+              Students
+            </p>
+          </div>
+          <div className="text-center">
+            <h2 className="font-para font-bold text-4xl mb-3 text-[#FDCA30]">
+              10
+            </h2>
+            <p className="text-[#101828] md:text-base text-sm font-para font-medium">
+              Universities
+            </p>
+          </div>
         </div>
       </section>
 
@@ -82,44 +106,25 @@ const Page = () => {
             />
           </div>
           <div>
-            <p className="font-bold mt-7 font-para text-sm">Students</p>
+            <p className="font-bold mt-7 font-para text-sm">
+              Training & placement
+            </p>
             <div className="mt-7">
-              {studentsStickyData.map((item) => (
-                <React.Fragment key={item.id}>
-                  <div
-                    onClick={
-                      item.subMenus
-                        ? () => setOpenNav(!openNav)
-                        : () => handleClick(item.unique)
-                    }
-                    className={`${item.subMenus && openNav ? "bg-secondary-lightgray" : activeSection === item.unique ? "bg-secondary-paleblue text-secondary-lighterblue" : "text-secondary-darkgray"} rounded-lg cursor-pointer py-3 px-4 text-sm font-medium font-para flex items-center justify-between`}
-                  >
-                    <p>{item.title}</p>
-                    {item.subMenus && (
-                      <IoIosArrowDown
-                        className={`${openNav ? "" : "rotate-180"}`}
-                      />
-                    )}
-                  </div>
-                  {item.subMenus &&
-                    openNav &&
-                    item.subMenus.map((value) => (
-                      <p
-                        key={value.id}
-                        onClick={() => handleClick(value.unique)}
-                        className={`${activeSection === value.unique ? "rounded-lg bg-secondary-paleblue text-secondary-lighterblue" : "text-secondary-darkgray"} mt-1 cursor-pointer text-center py-3 px-4 text-sm font-medium font-para`}
-                      >
-                        {value.title}
-                      </p>
-                    ))}
-                </React.Fragment>
+              {trainingPlacementData.map((item) => (
+                <p
+                  key={item.id}
+                  onClick={() => handleClick(item.unique)}
+                  className={` ${activeSection === item.unique ? "font-medium rounded-lg bg-secondary-paleblue text-secondary-lighterblue" : "text-secondary-darkgray"} cursor-pointer py-3 px-4 text-sm font-medium font-para`}
+                >
+                  {item.title}
+                </p>
               ))}
             </div>
           </div>
         </div>
 
         <div className="w-full lg:w-4/5 mb-20">
-          <div id="scholarship">
+          <div id="overview">
             <img src="/img/about/jss-academy.png" alt="jss-academy" />
             <p className="mt-2 text-2xl font-medium">
               In pursuit of excellence
@@ -180,7 +185,7 @@ const Page = () => {
             </div>
           </div>
 
-          <div id="statement" className="pt-20">
+          <div id="placement-team" className="pt-20">
             <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
               {ourValueData.map((value) => {
                 return (
@@ -192,11 +197,11 @@ const Page = () => {
             </div>
           </div>
 
-          <div id="mentoring" className="pt-28">
+          <div id="facilities" className="pt-28">
             <Authorities />
           </div>
 
-          <div id="exams" className="pt-28">
+          <div id="activities" className="pt-28">
             <img src="/img/about/jss-college.png" alt="jss-college" />
             <p className="mt-2 text-2xl font-medium">
               JSSMVP - In pursuit of excellence
@@ -223,7 +228,7 @@ const Page = () => {
             </p>
           </div>
 
-          <div id="techno-cultural" className="pt-20">
+          <div id="placement-procedure" className="pt-20">
             {employeesBenefitData.map((item, index) => (
               <div key={index} className="mt-10">
                 <ContentCard item={item} />
@@ -231,7 +236,7 @@ const Page = () => {
             ))}
           </div>
 
-          <div id="social-outreach" className="pt-20">
+          <div id="placement-portal" className="pt-20">
             {greenInitiativeData.map((item, index) => (
               <div key={index} className="mt-10">
                 <ContentCard item={item} />
