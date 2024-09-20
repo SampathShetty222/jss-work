@@ -162,7 +162,15 @@ const Page = () => {
           </div>
 
           <div id="authorities" className="pt-28">
-            <Authorities />
+            <section className="max-w-7xl md:mx-auto mx-4">
+              <div>
+                <p className="bg-[#EFF8FF] border border-[#B2DDFF] py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
+                  13 members
+                </p>
+                <h2 className="text-2xl font-normal mt-3">Governing Body</h2>
+              </div>
+              <Authorities />
+            </section>
           </div>
 
           <div id="jssmvp" className="pt-28">

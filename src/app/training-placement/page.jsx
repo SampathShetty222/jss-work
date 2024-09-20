@@ -1,14 +1,14 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Authorities from "../components/about-us/authorities";
+import Authorities from "@/components/about-us/authorities";
 import {
   employeesBenefitData,
   greenInitiativeData,
-} from "../components/about-us/data";
-import { ourValueData } from "../components/home/data";
-import OurValueCard from "../components/common/cards/ourValueCard";
-import ContentCard from "../components/common/cards/contentCard";
-import { trainingPlacementData } from "../components/trainingPlacement/data";
+} from "@/components/about-us/data";
+import { ourValueData } from "@/components/home/data";
+import OurValueCard from "@/components/common/cards/ourValueCard";
+import ContentCard from "@/components/common/cards/contentCard";
+import { trainingPlacementData } from "@/components/trainingPlacement/data";
 
 const Page = () => {
   const [activeSection, setActiveSection] = useState("overview");
