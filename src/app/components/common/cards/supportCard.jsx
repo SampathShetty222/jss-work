@@ -1,12 +1,13 @@
 import React from "react";
+import { PropTypes } from "prop-types";
 
-const OnlineGrievanceBanner = () => {
+const SupportCard = ({ item }) => {
   return (
     <>
       <section className="max-w-7xl md:mx-auto text-center py-20">
         <div className="max-w-2xl mx-auto mb-[32px]">
-          <h1 className="text-32 font-normal mb-6">Online Grievance Support</h1>
-          <p className="font-para text-base leading-[26px] text-primary-opactiy60">
+          <h1 className="text-32 font-normal mb-6">{item.title}</h1>
+          <p className="font-para text-base leading-[26px] text-secondary-opactiy60">
             Lorem ipsum dolor sit amet consectetur. Malesuada nibh justo nunc
             mauris. Pulvinar et morbi in egestas lectus non aliquam nibh
             imperdiet. At vitae sodales.
@@ -23,4 +24,6 @@ const OnlineGrievanceBanner = () => {
   );
 };
 
-export default OnlineGrievanceBanner;
+export default SupportCard;
+
+SupportCard.propTypes = { item: PropTypes.object };

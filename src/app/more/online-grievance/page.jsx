@@ -2,13 +2,13 @@
 
 "use client";
 import React, { useEffect, useState } from "react";
-import OnlineGrievanceBanner from "@/app/components/more/OnlineGrievanceBanner";
-import Authorities from "@/app/components/about-us/authorities";
+import Authorities from "@/components/about-us/authorities";
 import {
   antiRaggingCell,
   onlineGrievanceStickData,
 } from "../../components/more/data";
 import { GoArrowRight } from "react-icons/go";
+import SupportCard from "@/components/common/cards/supportCard";
 
 const OnlineGrievance = () => {
   const [activeSection, setActiveSection] = useState("general");
@@ -50,7 +50,12 @@ const OnlineGrievance = () => {
 
   return (
     <section className="px-5 md:px-20">
-      <OnlineGrievanceBanner />
+      <SupportCard
+        item={{
+          title: "Online Grievance Support",
+          desc: "Lorem ipsum dolor sit amet consectetur. Malesuada nibh justo nunc mauris.Pulvinar et morbi in egestas lectus non aliquam nibh imperdiet.At vitae sodales.",
+        }}
+      />
       <section className="max-w-7xl mx-auto flex gap-x-10 items-start">
         <div className="hidden lg:block w-1/5 sticky top-20">
           <div className="relative">

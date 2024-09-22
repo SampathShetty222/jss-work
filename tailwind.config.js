@@ -13,7 +13,7 @@ module.exports = {
 				'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))'
 			},
 			fontFamily: {
-				para: '"DM Sans", sans-serif'
+				para: '"DM Sans"'
 			},
 			fontSize:{
 				"32":"2rem",
@@ -70,7 +70,8 @@ module.exports = {
 					lightgray:"#CACBCF",
 					lighterblack:"#171717",
 					paleblue:"#B2DDFF",
-					palelightblue:"#EFF8FF"
+					palelightblue:"#EFF8FF",
+					opacity80:"#000000DE"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',

@@ -182,7 +182,7 @@ export const studentLinks = [
   {
     id: 1,
     title: "Scholarships",
-    link: "#",
+    link: "/student-life",
     desc: "Financial Scholarships",
     icon: "/img/student-life/scholarship.svg",
   },
