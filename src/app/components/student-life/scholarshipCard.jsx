@@ -14,6 +14,7 @@ const ScholarshipCard = ({ item }) => {
         href={item.link}
         className="leading-[26px] text-secondary-lighterblue hover:cursor-pointer text-base"
         target="_blank"
+        rel="noreferrer"
       >
         {item.link}
       </a>

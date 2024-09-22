@@ -2,10 +2,7 @@
 
 "use client";
 import React, { useEffect, useState } from "react";
-import {
-  employeesBenefitData,
-  greenInitiativeData,
-} from "@/components/about-us/data";
+import { greenInitiativeData } from "@/components/about-us/data";
 import { ourValueData } from "@/components/home/data";
 import OurValueCard from "@/components/common/cards/ourValueCard";
 import ContentCard from "@/components/common/cards/contentCard";

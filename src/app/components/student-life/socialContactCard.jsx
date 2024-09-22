@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { PropTypes } from "prop-types";
 
 const SocialContactCard = ({ item }) => {
   return (
@@ -19,3 +20,5 @@ const SocialContactCard = ({ item }) => {
 };
 
 export default SocialContactCard;
+
+SocialContactCard.propTypes = { item: PropTypes.object };
