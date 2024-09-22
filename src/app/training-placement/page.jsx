@@ -1,14 +1,22 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Authorities from "@/components/about-us/authorities";
-import {
-  employeesBenefitData,
-  greenInitiativeData,
-} from "@/components/about-us/data";
-import { ourValueData } from "@/components/home/data";
-import OurValueCard from "@/components/common/cards/ourValueCard";
+import { greenInitiativeData } from "@/components/about-us/data";
 import ContentCard from "@/components/common/cards/contentCard";
-import { trainingPlacementData } from "@/components/trainingPlacement/data";
+import {
+  industryData,
+  placementInfrastructureData,
+  placementOverviewData,
+  placementProcedureData,
+  placementProgramData,
+  quoteData,
+  trainingPlacementData,
+} from "@/components/trainingPlacement/data";
+import EventCard from "../components/common/cards/eventCard";
+import ProfileCard from "../components/common/cards/profileCard";
+import RecruiteLogoCard from "../components/common/cards/recruiteLogoCard";
+import ProgramCard from "../components/trainingPlacement/programCard";
+import ProcedureCard from "../components/trainingPlacement/procedureCard";
 
 const Page = () => {
   const [activeSection, setActiveSection] = useState("overview");
@@ -125,115 +133,172 @@ const Page = () => {
 
         <div className="w-full lg:w-4/5 mb-20">
           <div id="overview">
-            <img src="/img/about/jss-academy.png" alt="jss-academy" />
-            <p className="mt-2 text-2xl font-medium">
-              In pursuit of excellence
-            </p>
-            <div className="font-normal text-tertiary-gray text-base font-para">
-              <p className="mt-3">
-                JSS University, Noida is built on a strong reputation of JSS
-                Academy of Technical Education, Noida, and passionately
-                committed for providing education in Science, Technology,
-                Management and Life Sciences & Pharmacy. It is Steadfast to find
-                solutions to some of the great challenges of our time through
-                scientific research and technological innovations.
-              </p>
-              <p className="mt-3">
-                JSS University, Noida is the fourth University established by
-                JSS Mahavidyapeetha, besides the JSS Academy of Higher Education
-                and Research which is health sciences focused deemed university
-                at Mysuru, JSS Science and Technology University a state private
-                University at Mysuru and JSS Academy of Higher Education and
-                Research at Mauritius.
-              </p>
-              <p className="mt-3">
-                JSS University, Noida plays a key role in providing high quality
-                skilled manpower in the fields of Science, Engineering &
-                Technology and Management, Pharmacy field to transform the
-                society through research and innovation.
-              </p>
-              <p className="mt-3">
-                JSS University, Noida is committed to deliver quality education
-                at all levels and provide opportunities for aspiring youth to
-                meet the global needs of society in every sector.
-              </p>
+            {placementOverviewData.map((item, idx) => (
+              <EventCard key={idx} item={item} />
+            ))}
+
+            <div className="mt-8">
+              <p className="text-base text-tertiary-gray mb-5">Objectives</p>
+              <ul className="list-disc list-inside text-tertiary-gray font-para ml-6 text-base">
+                <li>
+                  {" "}
+                  Career guidance: Higher education, Placements and
+                  Entrepreneurship.
+                </li>
+                <li>Internship & Full Time Placement Activities.</li>
+                <li>Facilitate Pre-Placement visits to the companies.</li>
+                <li>
+                  Communication, Networking & Relationship Building with
+                  Potential Recruiters.
+                </li>
+              </ul>
             </div>
 
-            <img className="mt-20" src="/img/about/guruji.png" alt="guruji" />
-            <p className="mt-3 text-2xl font-medium">
-              Jagadguru Sri Shivarathri Deshikendra Mahaswamiji
-            </p>
-            <div className="mt-5 font-normal text-tertiary-gray text-base font-para">
-              His Holiness Jagadguru Sri Shivarathri Deshikendra Mahaswamiji,
-              the present pontiff and the 24th Peethadhyaksha of Sri Jagadguru
-              Veerasimhasana Suttur Math, assumed the Peetha in 1986 at the
-              young age of 29 years. He had his spiritual training under the
-              guidance of his illustrious predecessor H H Jagadguru Dr Sri
-              Shivarathri Rajendra Mahaswamiji the founder president of the JSS
-              Mahavidyapeetha, an educational and cultural organization
-              dedicated to the ideal of providing education to the villages of
-              Karnataka. His Holiness Sri Shivarathri Deshikendra Mahaswamiji,
-              the Honourable Chancellor of JSS University, Noida - a visionary,
-              endeavoured not only to cross the Vindhyas and establish
-              engineering colleges, schools, etc at NOIDA (UP) and the JSS
-              Spiritual and Cultural Centre at New Delhi but also travelled
-              beyond the shores of the country and established the presence of
-              the Math in USA, Mauritius and Dubai. His efforts to reach out to
-              the core of the problems that challenge our society be it
-              literacy, health care, employment or building values amongst the
-              society is lauded and recognised by one and all.
+            <div className="mt-20">
+              {quoteData.map((item, idx) => (
+                <ProfileCard key={idx} item={item} />
+              ))}
             </div>
-          </div>
 
-          <div id="placement-team" className="pt-20">
-            <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
-              {ourValueData.map((value) => {
+            <p className="mt-20 text-2xl text-tertiary-black mb-6">
+              Industry Institute Collaborations (MOUs & COEs)
+            </p>
+            <div className=" mt-3 pt-2 flex recruiter-scroll overflow-x-auto gap-[18px] w-full">
+              {industryData.map((value, index) => {
                 return (
-                  <React.Fragment key={value.id}>
-                    <OurValueCard value={value} />
+                  <React.Fragment key={index}>
+                    <RecruiteLogoCard item={value} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+            <p className="mt-20 text-2xl text-tertiary-black mb-6">
+              Product Based Companies
+            </p>
+            <div className="pt-2 flex recruiter-scroll overflow-x-auto gap-[18px] w-full">
+              {industryData.map((value, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <RecruiteLogoCard item={value} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+            <p className="text-2xl text-tertiary-black mb-6 mt-20 inline-block">
+              Service Based Companies
+            </p>
+            <div className="pt-2 flex recruiter-scroll overflow-x-auto gap-[18px] w-full">
+              {industryData.map((value, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <RecruiteLogoCard item={value} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+            <p className="mt-20 text-2xl text-tertiary-black mb-6">
+              Core (Manufacturing / Design)
+            </p>
+            <div className="pt-2 flex recruiter-scroll overflow-x-auto gap-[18px] w-full">
+              {industryData.map((value, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <RecruiteLogoCard item={value} />
+                  </React.Fragment>
+                );
+              })}
+            </div>
+
+            <p className="mt-20 text-2xl text-tertiary-lightblack mb-6">
+              Others
+            </p>
+            <div className="pt-2 flex recruiter-scroll overflow-x-auto gap-[18px] w-full">
+              {industryData.map((value, index) => {
+                return (
+                  <React.Fragment key={index}>
+                    <RecruiteLogoCard item={value} />
                   </React.Fragment>
                 );
               })}
             </div>
           </div>
 
-          <div id="facilities" className="pt-28">
-            <Authorities />
+          <div id="placement-team" className="pt-20">
+            <div className="py-10">
+              <div>
+                <p className="bg-tertiary-palelightblue border border-tertiary-paleblue py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
+                  6 members
+                </p>
+                <h2 className="text-2xl font-normal mt-3">Advisory Board</h2>
+              </div>
+              <Authorities />
+            </div>
+
+            <div className="py-10">
+              <div>
+                <p className="bg-tertiary-palelightblue border border-tertiary-paleblue py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
+                  6 members
+                </p>
+                <h2 className="text-2xl font-normal mt-3">Placement Team</h2>
+              </div>
+              <Authorities />
+            </div>
           </div>
 
-          <div id="activities" className="pt-28">
-            <img src="/img/about/jss-college.png" alt="jss-college" />
-            <p className="mt-2 text-2xl font-medium">
-              JSSMVP - In pursuit of excellence
+          <div id="facilities" className="pt-20">
+            <p className="text-2xl text-primary-darkblack mb-5 font-medium">
+              Infrastructure and Facilities
             </p>
+            <p className="text-base font-para font-normal text-tertiary-gray text-start mb-20">
+              Explore our state-of-the-art infrastructure and comprehensive
+              facilities designed to support both academic excellence and
+              extracurricular activities. Our campus is equipped with advanced
+              labs, modern classrooms, sports amenities, and recreational spaces
+              to ensure a well-rounded student experience.
+            </p>
+            <div className="grid md:grid-cols-2 gap-x-5 gap-y-10 ">
+              {placementInfrastructureData.map((item, index) => (
+                <React.Fragment key={index}>
+                  <EventCard item={item} />
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
 
-            <p className="mt-5 font-normal text-tertiary-gray text-base font-para">
-              The origin of JSS Mahavidyapeetha (JSSMVP), a formidable
-              educational movement, can be traced to the establishment of a
-              small hostel in 1928 to cater to the accommodation needs of
-              students pursuing higher studies in Mysore. His Holiness Jagadguru
-              Dr. Sri Shivarathri Rajendra Mahaswamiji established the Jagadguru
-              Sri Shivarathreeshwara Mahavidyapeetha (JSSMVP) in 1954 which was
-              registered under the Societies Registration Act 1960.
-            </p>
-            <p className="mt-5 font-normal text-tertiary-gray text-base font-para">
-              Focusing on a purpose as expansive yet specific as improving
-              quality of life through Human Development, the JSS Mahavidyapeetha
-              has grown from strength to strength. A long and healthy life,
-              Education for all and a decent standard of living, the indicators
-              of Human development, have been the underlying philosophy of
-              Jagadguru Sri Veerasimhasana Mahasamsthana Math, Suttur
-              Srikshethra for centuries. This is also the philosophy for which
-              the Mahaidyapeetha today stands for.
-            </p>
+          <div id="activities" className="pt-20">
+            {placementProgramData.map((item, index) => {
+              return (
+                <div key={index} className="mb-16">
+                  <ProgramCard item={item} />
+                </div>
+              );
+            })}
           </div>
 
           <div id="placement-procedure" className="pt-20">
-            {employeesBenefitData.map((item, index) => (
-              <div key={index} className="mt-10">
-                <ContentCard item={item} />
+            <p className="text-2xl mb-7">Placement Procedure </p>
+            <p className="text-base font-para text-tertiary-gray">
+              Our streamlined placement procedure ensures a smooth transition
+              from campus to career. The TPC coordinates with companies to
+              arrange job descriptions, pre-placement talks, and interview
+              schedules. Eligible students are matched with job opportunities,
+              and the entire process is designed to provide the best fit for
+              both students and employers, leading to successful placements.
+              Explore the dynamic world of Computer Science at JSS University
+              through our gallery. From
+            </p>
+            <div className="pl-10">
+              <div className="border-l-2 relative border-gray-200 overflow-visible mt-10">
+                {placementProcedureData.map((item, index) => (
+                  <div key={index} className="ml-[-47px] mt-5">
+                    <ProcedureCard item={item} />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
 
           <div id="placement-portal" className="pt-20">

@@ -20,13 +20,17 @@ const OnlineGrievance = () => {
       "anti-ragging-cell",
       "womens-cell",
     ];
+
+    const middleOfViewport = window.innerHeight / 2;
     sections.forEach((id) => {
       const sectionElement = document.getElementById(id);
-      const { top } = sectionElement.getBoundingClientRect();
-      const offset = window.innerHeight * 0.1;
-      // Console.log(top?.top);
+      if (sectionElement) {
+        const { top, bottom } = sectionElement.getBoundingClientRect();
 
-      if (top <= offset && top >= -offset) setActiveSection(id);
+        // Check if the section is around the middle of the viewport
+        if (top <= middleOfViewport && bottom >= middleOfViewport)
+          setActiveSection(id);
+      }
     });
   };
 
@@ -45,7 +49,7 @@ const OnlineGrievance = () => {
   };
 
   return (
-    <>
+    <section className="px-5 md:px-20">
       <OnlineGrievanceBanner />
       <section className="max-w-7xl mx-auto flex gap-x-10 items-start">
         <div className="hidden lg:block w-1/5 sticky top-20">
@@ -104,7 +108,7 @@ const OnlineGrievance = () => {
             </div>
             <div className="py-20">
               <div>
-                <p className="bg-[#EFF8FF] border border-[#B2DDFF] py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
+                <p className="bg-tertiary-palelightblue border border-tertiary-paleblue py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
                   6 members
                 </p>
                 <h2 className="text-2xl font-normal mt-3">
@@ -114,7 +118,7 @@ const OnlineGrievance = () => {
               <Authorities />
             </div>
             <div>
-              <h3 className="text-2xl text-[#101828] uppercase font-normal pb-5">
+              <h3 className="text-2xl text-tertiary-black uppercase font-normal pb-5">
                 ROLES AND RESPONSIBILITIES
               </h3>
               <ul className="text-base font-para font-normal text-[#475467] list-disc">
@@ -140,7 +144,7 @@ const OnlineGrievance = () => {
                   To review the outgoing student’s feedback.
                 </li>
               </ul>
-              <p className="text-[#475467] font-para font-normal text-base pt-4">
+              <p className="text-tertiary-gray font-para font-normal text-base pt-4">
                 Grievances by students, staff and parents can be registered
                 using this link:
                 <br />
@@ -173,7 +177,7 @@ const OnlineGrievance = () => {
             </div>
             <div className="py-20">
               <div>
-                <p className="bg-[#EFF8FF] border border-[#B2DDFF] py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
+                <p className="bg-tertiary-palelightblue border border-tertiary-paleblue py-1 px-2 font-medium rounded-full text-[#175CD3] font-para text-xs w-fit">
                   6 members
                 </p>
                 <h2 className="text-2xl font-normal mt-3">
@@ -280,9 +284,65 @@ const OnlineGrievance = () => {
               </p>
             </div>
           </div>
+
+          <div id="womens-cell" className="pt-20">
+            <h2 className="mt-2 text-2xl font-medium">Anti Ragging Cell</h2>
+            <div className="font-normal text-tertiary-gray text-base font-para">
+              <p className="mt-3">
+                Ragging is a social evil and criminal offence under provisions
+                of Indian Penal Code (IPC) and, all students are advised not to
+                indulge in any form of ragging in or outside the Campus. The
+                University Grant Commission has promulgated Regulation on
+                "Curbing the Menace of Ragging in Higher Educational
+                institutions". A copy of these regulations is enclosed with this
+                letter.All students of JSS Academy of Technical Education, Noida
+                and their parents are required to study these regulations, and
+                submit an Affidavit separately stating that he/she has carefully
+                read and understood the provision contained in these
+                Regulations. Format of the Affidavit to be given by the student
+                is placed in Annexure-I and the format of the Affidavit to be
+                given by the parent/guardian is given in Annexure II of these
+                regulations. Both the Affidavits are to be given on a
+                Non-Judicial Stamp Paper of Rs.10/- Rupees Ten only, signed in.
+              </p>
+            </div>
+            <div className="mt-[18px]">
+              {antiRaggingCell.map((value, i) => (
+                <div
+                  className="max-w-[720px] border-b px-6 py-[22px] flex justify-between items-center"
+                  key={i}
+                >
+                  <p className="text-base font-para font-normal text-[#101828]">
+                    {value.title}
+                  </p>
+                  <GoArrowRight className="text-base text-[#475467]" />
+                </div>
+              ))}
+            </div>
+            <div className="my-10">
+              <p className="text-base">
+                If any grievance/problem:{" "}
+                <span className="text-[#FF4E00]">
+                  CLICK HERE TO FILL THE FORM
+                </span>
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl text-[#101828] pb-5">Contact Us</h3>
+              <p className="text-[#475467] font-para text-base">
+                09990841257 - Chairman (Anti ragging Cell)
+              </p>
+              <p className="text-[#475467] font-para text-base">
+                08095382275 - Member Secretary (Anti ragging Cell)
+              </p>
+              <p className="text-[#475467] font-para text-base">
+                Chief warden (Member of Anti ragging cell)
+              </p>
+            </div>
+          </div>
         </div>
       </section>
-    </>
+    </section>
   );
 };
 export default OnlineGrievance;

@@ -68,7 +68,9 @@ module.exports = {
 					darkblack:"#344054",
 					lightblack:"#1A1A1A",
 					lightgray:"#CACBCF",
-					lighterblack:"#171717"
+					lighterblack:"#171717",
+					paleblue:"#B2DDFF",
+					palelightblue:"#EFF8FF"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',

@@ -279,7 +279,7 @@ export const moreLinks = [
   {
     id: 3,
     title: "Online Grievance Support",
-    link: "#",
+    link: "/more/online-grievance",
     desc: "Submit Grievances",
     icon: "/img/more/annotation-alert.svg",
   },

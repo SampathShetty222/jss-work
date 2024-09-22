@@ -52,7 +52,7 @@ const HomeBanner = () => {
               />
             </div>
 
-            <div className="absolute md:w-full text-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
+            <div className="absolute px-2 md:px-0 w-full text-center z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-white">
               <h1 className="font-normal md:leading-[3.2rem] max-w-3xl mx-auto text-xl md:text-5xl">
                 {item.title}
               </h1>
@@ -77,14 +77,14 @@ const HomeBanner = () => {
 
       <div
         onClick={() => sliderRef.current.slickNext()}
-        className="w-10 h-10 cursor-pointer absolute top-1/2 -translate-y-1/2 right-10 md:right-20 flex justify-center items-center border-2 rounded-full"
+        className="w-10 h-10 cursor-pointer absolute bottom-4 md:bottom-0 md:top-1/2 -translate-y-1/2 right-10 md:right-20 flex justify-center items-center border-2 rounded-full"
       >
         <GoArrowRight className="text-xl text-white" />
       </div>
 
       <div
         onClick={() => sliderRef.current.slickPrev()}
-        className="w-10 h-10 cursor-pointer absolute top-1/2 -translate-y-1/2 left-10 md:left-20 flex justify-center items-center border-2 rounded-full"
+        className="w-10 h-10 cursor-pointer absolute bottom-4 md:bottom-0 md:top-1/2 -translate-y-1/2  right-24 md:right-0 md:left-20 flex justify-center items-center border-2 rounded-full"
       >
         <GoArrowRight className="text-xl text-white rotate-180" />
       </div>

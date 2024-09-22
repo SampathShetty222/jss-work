@@ -18,11 +18,9 @@ const CalendarOfEvents = () => {
         ))}
       </div>
       <div className="flex items-center justify-center mt-12 md:px-3">
-        <button className="bg-primary-orange font-para p-3 rounded-lg text-lg relative text-white w-full md:w-fit">
+        <button className="bg-primary-orange flex items-center justify-center gap-x-2 font-para p-2 rounded-lg text-sm font-medium text-white w-full md:w-fit">
           Get Updates
-          <span className="ml-2">
-            <HiOutlineArrowRight className="left-8 inline-block text-lg" />
-          </span>
+          <HiOutlineArrowRight className="text-lg" />
         </button>
       </div>
     </section>

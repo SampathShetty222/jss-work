@@ -1,7 +1,5 @@
 /* eslint-disable object-curly-newline */
-
 import { PropTypes } from "prop-types";
-
 import Image from "next/image";
 import React from "react";
 
