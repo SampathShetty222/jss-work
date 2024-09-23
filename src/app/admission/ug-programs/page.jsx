@@ -1,7 +1,7 @@
 "use client";
 import CoursesOfferedCard from "@/components/admission/coursesOfferedCard";
 import { courseDetails } from "@/components/about-us/data";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { RiHome6Line } from "react-icons/ri";
 import { IoIosArrowForward } from "react-icons/io";
 import Select from "react-select";
@@ -27,7 +27,7 @@ const Page = () => {
       <p className="mt-14 text-32 text-center font-normal">
         Courses Offered By JSS University
       </p>
-      <p className="text-secondary-opactiy60 mt-5 max-w-xl text-center mx-auto">
+      <p className="text-secondary-opactiy60 font-para mt-5 max-w-xl text-center mx-auto">
         Find important updates, academic schedules, and key notifications to
         stay informed with the latest circulars and announcements
       </p>
@@ -57,9 +57,9 @@ const Page = () => {
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 mt-10 mb-10">
         {courseDetails.map((value, i) => (
-          <Fragment key={i}>
+          <Link href={"/admission/ug-programs/1"} key={i}>
             <CoursesOfferedCard val={value} />
-          </Fragment>
+          </Link>
         ))}
       </div>
     </section>
