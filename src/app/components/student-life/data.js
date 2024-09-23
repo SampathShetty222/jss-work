@@ -173,3 +173,159 @@ export const contactData = [
     link: "7022098322",
   },
 ];
+
+export const contactMembers = [
+  {
+    id: 1,
+    image: "/img/student-life/contact1.svg",
+    name: "Dr. Lorem Ipsum (Registrar,JSSATE, Noida)- Ph.no: 9999952051",
+  },
+  {
+    id: 2,
+    image: "/img/student-life/contact2.svg",
+    name: "Mrs. Jayamala (FDA)- Ph.no: 9810547793",
+  },
+];
+
+export const technoCulturalData = [
+  {
+    id: 1,
+    name: "Techno 01",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+  {
+    id: 2,
+    name: "Techno 02",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+  {
+    id: 3,
+    name: "Techno 03",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+  {
+    id: 4,
+    name: "Techno 04",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+  {
+    id: 5,
+    name: "Techno 05",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+  {
+    id: 6,
+    name: "Techno 06",
+    image: "",
+    pdfName: "Technocultural.pdf",
+    pdf: "/dummy.pdf",
+  },
+];
+
+export const videos = [
+  {
+    id: 1,
+    image: "/img/student-life/techno-culture/videos1.svg",
+    altText: "Video1",
+  },
+  {
+    id: 2,
+    image: "/img/student-life/techno-culture/videos2.svg",
+    altText: "Video2",
+  },
+  {
+    id: 3,
+    image: "/img/student-life/techno-culture/videos3.svg",
+    altText: "Video3",
+  },
+  {
+    id: 4,
+    image: "/img/student-life/techno-culture/videos4.svg",
+    altText: "Video4",
+  },
+];
+
+export const photos = [
+  {
+    id: 1,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 2,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 3,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 4,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 5,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 6,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 7,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 8,
+    image: "",
+    altText: "",
+  },
+  {
+    id: 9,
+    image: "",
+    altText: "",
+  },
+];
+
+export const swatchBharatMission = [
+  {
+    id: 1,
+    image: "",
+    name: "Swachh Bharat Abhiyan",
+    pdfName: "Bharatabhiyan.pdf",
+    pdf: "/dummy.pdf",
+  },
+];
+
+export const scholorshipTableData = [
+  {
+    id: "1",
+    slno: 1,
+    nameOfScholorship: "UP Scholarships/PMSSS",
+    year2019To20: 61118494,
+    year2018To18: 48437393,
+  },
+  {
+    id: "2",
+    slno: 2,
+    nameOfScholorship: "NSP Minority/ Pragati Scholarship",
+    year2019To20: 61118494,
+    year2018To18: 1175000,
+  },
+];

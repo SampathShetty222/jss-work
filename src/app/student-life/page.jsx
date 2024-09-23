@@ -1,25 +1,28 @@
 /* eslint-disable no-nested-ternary */
 
 "use client";
-import React, { useEffect, useState } from "react";
-import { greenInitiativeData } from "@/components/about-us/data";
-import { ourValueData } from "@/components/home/data";
-import OurValueCard from "@/components/common/cards/ourValueCard";
-import ContentCard from "@/components/common/cards/contentCard";
+import React, { Fragment, useEffect, useState } from "react";
+
 import {
   aicteScholarshipData,
   contactData,
   keyBenefitsData,
   mentoringData,
   nationalScholarshipData,
+  photos,
   stateScholarshipData,
   studentsStickyData,
+  swatchBharatMission,
+  technoCulturalData,
+  videos,
 } from "@/components/student-life/data";
 import { IoIosArrowDown } from "react-icons/io";
 import SupportCard from "@/components/common/cards/supportCard";
 import ScholarshipCard from "@/components/student-life/scholarshipCard";
 import MentorCard from "@/components/student-life/mentorCard";
 import SocialContactCard from "../components/student-life/socialContactCard";
+import ScholarshipTable from "../components/student-life/scholarshipTable";
+import PdfDownloadCard from "../components/common/pdfDownloadCard";
 
 const Page = () => {
   const [activeSection, setActiveSection] = useState("scholarship");
@@ -171,17 +174,8 @@ const Page = () => {
               ))}
             </div>
           </div>
-
           <div id="statement" className="pt-20">
-            <div className="md:grid md:grid-cols-2 gap-6 rounded-[14px] pt-[36px]">
-              {ourValueData.map((value) => {
-                return (
-                  <React.Fragment key={value.id}>
-                    <OurValueCard value={value} />
-                  </React.Fragment>
-                );
-              })}
-            </div>
+            <ScholarshipTable />
           </div>
 
           <div id="mentoring" className="pt-20">
@@ -292,14 +286,134 @@ const Page = () => {
                 Elementum.
               </p>
             </div>
-          </div>
-
-          <div id="social-outreach" className="pt-20">
-            {greenInitiativeData.map((item, index) => (
-              <div key={index} className="mt-10">
-                <ContentCard item={item} />
+            <div className="py-20">
+              {technoCulturalData.map((value, i) => (
+                <Fragment key={i}>
+                  <PdfDownloadCard props={value} />
+                </Fragment>
+              ))}
+            </div>
+            <div className="md:max-w-[720px]">
+              <h4 className="text-[#101828] text-2xl">Videos</h4>
+              <div className="grid md:grid-cols-2 gap-6 pt-5">
+                {videos.map((value, i) => (
+                  <div key={i}>
+                    <img
+                      src={value.image}
+                      alt={value.altText}
+                      className="md:max-w-[350px]"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            <div className="md:max-w-[720px] py-20">
+              <h4 className="text-[#101828] text-2xl">Photos</h4>
+              <div className="grid md:grid-cols-3 gap-6 pt-5">
+                {photos.map((value, i) => (
+                  <div
+                    className="w-56 h-[304px] overflow-hidden bg-[#cccccc] rounded-lg"
+                    key={i}
+                  >
+                    <img
+                      src={value.image}
+                      alt={value.altText}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div id="social-outreach" className="md:max-w-[720px]">
+            <div className="flex flex-col items-start justify-center">
+              <p className="text-2xl text-primary-darkblack marcellus">
+                Swachh Bharat Abhiyan
+              </p>
+              <p className="mt-5 text-base font-para text-tertiary-gray">
+                Swachh Bharat Mission i.e., Clean India Mission, a national
+                level campaign, recently launched by the Government of India is
+                a major step towards the protection of degrading environment.
+                The objectives of the campaign include elimination of open
+                defection, conversion of insanitary toilets to pour flush
+                toilets, eradication of manual scavenging and above all to bring
+                about a behavioural change in people regarding healthy
+                sanitation practices and to ensure public participation in
+                achieving these objectives. Globally, India continues to be the
+                country with highest number of people practising open defection.
+                If Swachh Bharat Mission (SBM) is implemented properly with all
+                its stakeholders taking their respective responsibilities, there
+                is no wonder that one day India will become an open defection
+                free country.
+              </p>
+            </div>
+            <div className="pt-6">
+              {swatchBharatMission.map((value, i) => (
+                <Fragment key={i}>
+                  <PdfDownloadCard props={value} />
+                </Fragment>
+              ))}
+            </div>
+
+            <div className="flex flex-col items-start justify-center mt-20">
+              <p className="text-2xl text-primary-darkblack marcellus">
+                Unnat Bharat Abhiyan
+              </p>
+              <p className="mt-5 text-base font-para text-tertiary-gray">
+                It is a flagship program of the Ministry of Education. It was
+                launched in 2014. It aims to link the Higher Education
+                Institutions (HEIs) with a set of at least (5) villages, so that
+                these institutions can contribute to the economic and social
+                betterment of these village communities using their knowledge
+                base. It covers two major domains for holistic development of
+                villages – human development and material (economic) development
+                - in an integrated way.
+              </p>
+              <p className="text-base font-para text-tertiary-gray mt-3">
+                The Indian Institute of Technology Delhi (IIT, Delhi) has been
+                designated as the National Coordinating Institute (NCI) for the
+                UBA scheme.
+              </p>
+            </div>
+            <div className="pt-6">
+              {swatchBharatMission.map((value, i) => (
+                <Fragment key={i}>
+                  <PdfDownloadCard props={value} />
+                </Fragment>
+              ))}
+            </div>
+
+            <div className="md:max-w-[720px] mt-20">
+              <h4 className="text-[#101828] text-2xl">Videos</h4>
+              <div className="grid md:grid-cols-2 gap-6 pt-5">
+                {videos.map((value, i) => (
+                  <div key={i}>
+                    <img
+                      src={value.image}
+                      alt={value.altText}
+                      className="md:max-w-[350px]"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="md:max-w-[720px] py-20">
+              <h4 className="text-[#101828] text-2xl">Photos</h4>
+              <div className="grid md:grid-cols-3 gap-6 pt-5">
+                {photos.map((value, i) => (
+                  <div
+                    className="w-56 h-[304px] overflow-hidden bg-[#cccccc] rounded-lg"
+                    key={i}
+                  >
+                    <img
+                      src={value.image}
+                      alt={value.altText}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
