@@ -27,7 +27,7 @@ const Page = () => {
       <p className="mt-14 text-32 text-center font-normal">
         Courses Offered By JSS University
       </p>
-      <p className="text-secondary-opactiy60 mt-5 max-w-xl text-center mx-auto">
+      <p className="text-secondary-opactiy60 font-para mt-5 max-w-xl text-center mx-auto">
         Find important updates, academic schedules, and key notifications to
         stay informed with the latest circulars and announcements
       </p>

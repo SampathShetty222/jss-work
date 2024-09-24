@@ -36,7 +36,7 @@ const ScholarshipTable = () => {
     <>
       <section className="mx-4 py-8 overflow-x-auto">
         <div className="w-[924px] py-[32px] border-t border-x rounded-tl-lg rounded-tr-lg pl-6">
-          <h4 className="text-lg font-normal text-[#101828]">
+          <h4 className="text-lg font-normal text-primary-darkblack">
             Statement of Scholarships
           </h4>
         </div>
@@ -78,8 +78,8 @@ const ScholarshipTable = () => {
       </section>
 
       <section className="md:mx-4 mt-10 md:mt-0">
-        <div className="max-w-[924px] py-[32px] border-t border-x rounded-tl-lg rounded-tr-lg pl-6">
-          <h4 className="text-lg font-normal text-[#101828]">
+        <div className="max-w-tableMAxWidth py-32 border-t border-x rounded-tl-lg rounded-tr-lg pl-6">
+          <h4 className="text-lg font-normal text-primary-darkblack">
             For Scholarship related queries, Contact
           </h4>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { PropTypes } from "prop-types";
 
-const PdfDownloadCard = (props) => {
+const PdfDownloadCard = ({ props }) => {
   return (
     <div
       className="border-b-2 border-gray-200 grid grid-cols-12"
@@ -37,4 +37,6 @@ PdfDownloadCard.propTypes = {
   image: PropTypes.string.isRequired,
   pdfName: PropTypes.string.isRequired,
   pdf: PropTypes.string.isRequired,
+  value: PropTypes.object.isRequired,
+  props: PropTypes.object.isRequired,
 };

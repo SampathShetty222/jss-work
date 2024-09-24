@@ -4,7 +4,6 @@ import React from "react";
 import { FiArrowUpRight } from "react-icons/fi";
 import Box from "../about-us/boxChip";
 import { PropTypes } from "prop-types";
-import Link from "next/link";
 
 const CoursesOfferedCard = ({ val }) => {
   return (
@@ -15,9 +14,7 @@ const CoursesOfferedCard = ({ val }) => {
           <Box item={val.years} bgColor="bg-[#4BA6F5]" />
           <Box item={val.level} bgColor="bg-[#33CC99]" />
         </div>
-        <Link href="#">
-          <FiArrowUpRight className="text-lg" />
-        </Link>
+        <FiArrowUpRight className="text-lg" />
       </div>
     </div>
   );

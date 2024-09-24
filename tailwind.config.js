@@ -20,7 +20,8 @@ module.exports = {
 				"10px":"10px"
 			},
 			maxWidth:{
-				"headerCard":"600px"
+				"headerCard":"600px",
+				"tableMAxWidth":"924px"
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -71,7 +72,8 @@ module.exports = {
 					lighterblack:"#171717",
 					paleblue:"#B2DDFF",
 					palelightblue:"#EFF8FF",
-					opacity80:"#000000DE"
+					opacity80:"#000000DE",
+					lightwhite:"#cccccc"
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -100,7 +102,8 @@ module.exports = {
 				"18":"18px"
 			},
 			padding:{
-				"10px":"10px"
+				"10px":"10px",
+				"32":"32px"
 			}
 		}
 	},

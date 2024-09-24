@@ -294,7 +294,7 @@ const Page = () => {
               ))}
             </div>
             <div className="md:max-w-[720px]">
-              <h4 className="text-[#101828] text-2xl">Videos</h4>
+              <h4 className="text-primary-darkblack text-2xl">Videos</h4>
               <div className="grid md:grid-cols-2 gap-6 pt-5">
                 {videos.map((value, i) => (
                   <div key={i}>
@@ -308,11 +308,11 @@ const Page = () => {
               </div>
             </div>
             <div className="md:max-w-[720px] py-20">
-              <h4 className="text-[#101828] text-2xl">Photos</h4>
+              <h4 className="text-primary-darkblack text-2xl">Photos</h4>
               <div className="grid md:grid-cols-3 gap-6 pt-5">
                 {photos.map((value, i) => (
                   <div
-                    className="w-56 h-[304px] overflow-hidden bg-[#cccccc] rounded-lg"
+                    className="w-56 h-[304px] overflow-hidden bg-tertiary-lightwhite rounded-lg"
                     key={i}
                   >
                     <img
@@ -384,7 +384,7 @@ const Page = () => {
             </div>
 
             <div className="md:max-w-[720px] mt-20">
-              <h4 className="text-[#101828] text-2xl">Videos</h4>
+              <h4 className="text-primary-darkblack text-2xl">Videos</h4>
               <div className="grid md:grid-cols-2 gap-6 pt-5">
                 {videos.map((value, i) => (
                   <div key={i}>
@@ -398,11 +398,11 @@ const Page = () => {
               </div>
             </div>
             <div className="md:max-w-[720px] py-20">
-              <h4 className="text-[#101828] text-2xl">Photos</h4>
+              <h4 className="text-primary-darkblack text-2xl">Photos</h4>
               <div className="grid md:grid-cols-3 gap-6 pt-5">
                 {photos.map((value, i) => (
                   <div
-                    className="w-56 h-[304px] overflow-hidden bg-[#cccccc] rounded-lg"
+                    className="w-56 h-[304px] overflow-hidden bg-tertiary-lightwhite rounded-lg"
                     key={i}
                   >
                     <img
