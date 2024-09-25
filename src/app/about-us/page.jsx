@@ -1,8 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Authorities from "../components/about-us/authorities";
 import AboutBanner from "../components/about-us/aboutBanner";
 import {
+  aboutMemberCardData,
   aboutStickyData,
   employeesBenefitData,
   greenInitiativeData,
@@ -169,7 +170,16 @@ const Page = () => {
                 </p>
                 <h2 className="text-2xl font-normal mt-3">Governing Body</h2>
               </div>
-              <Authorities />
+              <div className="md:grid md:grid-cols-3 pt-10 gap-8">
+                {aboutMemberCardData.map((value, i) => (
+                  <Fragment key={i}>
+                    <Authorities props={value} index={i} />
+                  </Fragment>
+                ))}
+              </div>
+              <button className="text-sm font-medium w-fit px-4 py-[10px] border-2 border-[#CACBCF] border-opacity-80 rounded-md font-para">
+                View More
+              </button>
             </section>
           </div>
 

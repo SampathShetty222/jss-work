@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import Authorities from "@/components/about-us/authorities";
 import {
   antiRaggingCell,
@@ -9,6 +9,7 @@ import {
 } from "../../components/more/data";
 import { GoArrowRight } from "react-icons/go";
 import SupportCard from "@/components/common/cards/supportCard";
+import { aboutMemberCardData } from "@/app/components/about-us/data";
 
 const OnlineGrievance = () => {
   const [activeSection, setActiveSection] = useState("general");
@@ -120,7 +121,16 @@ const OnlineGrievance = () => {
                   Grievance Redressal Committee
                 </h2>
               </div>
-              <Authorities />
+              <div className="md:grid md:grid-cols-3 pt-10 gap-8">
+                {aboutMemberCardData.map((value, i) => (
+                  <Fragment key={i}>
+                    <Authorities props={value} index={i} />
+                  </Fragment>
+                ))}
+              </div>
+              <button className="text-sm font-medium w-fit px-4 py-[10px] border-2 border-[#CACBCF] border-opacity-80 rounded-md font-para">
+                View More
+              </button>
             </div>
             <div>
               <h3 className="text-2xl text-tertiary-black uppercase font-normal pb-5">
